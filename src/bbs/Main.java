@@ -36,7 +36,7 @@ public class Main extends JFrame implements MouseListener,MouseMotionListener {
 		label = new JLabel("No Mouse Event Captured", JLabel.CENTER);
 		add(label);
 		addMouseListener(this);
-		
+		addMouseMotionListener(this);
 		JMenuBar menuBar = new JMenuBar();
 		setJMenuBar(menuBar);
 
