@@ -6,20 +6,18 @@ import java.awt.event.*;
 import javax.swing.*;
 import javax.swing.border.*;
 
-public class Main extends JFrame implements MouseListener,MouseMotionListener {
+public class Main extends JFrame{
 
 	private JPanel contentPane;
 	public JLabel label;
-	/**
-	 * Launch the application.
-	 */
+	public static Draw object = new Draw();
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
 					Main frame = new Main();
 					frame.setVisible(true);
-
+				
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -34,12 +32,12 @@ public class Main extends JFrame implements MouseListener,MouseMotionListener {
 	public Main() {
 		setTitle("BBS-Bread");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
 		setBounds(100, 100, 900, 600);
 		label = new JLabel("No Mouse Event Captured", JLabel.CENTER);
 		add(label);
 
-		addMouseListener(this);
+		addMouseListener(new AL());
+		addMouseMotionListener(new AL());
 		
 		JMenuBar menuBar = new JMenuBar();
 		setJMenuBar(menuBar);
@@ -121,66 +119,74 @@ public class Main extends JFrame implements MouseListener,MouseMotionListener {
 	}
 
 
-	@Override
-	public void mouseClicked(MouseEvent e) {
-		// TODO Auto-generated method stub
-		int x = e.getX();
-		int y = e.getY();
-		System.out.println("mouseClicked " + x + " - Y: " + y);
+	
 
+	static class AL extends MouseAdapter{
+		@Override
+		public void mouseClicked(MouseEvent e) {
+			// TODO Auto-generated method stub
+			int x = e.getX();
+			int y = e.getY();
+			System.out.println("mouseClicked " + x + " - Y: " + y);
+			object.drawing(x, y);
+
+		}
+
+		@Override
+		public void mouseEntered(MouseEvent e) {
+			// TODO Auto-generated method stub
+			int x = e.getX();
+			int y = e.getY();
+			System.out.println("mouseEntered " + x + " - Y: " + y);
+			object.drawing(x, y);
+
+		}
+
+		@Override
+		public void mouseExited(MouseEvent e) {
+			// TODO Auto-generated method stub
+			int x = e.getX();
+			int y = e.getY();
+			System.out.println("mouseExited " + x + " - Y: " + y);
+
+		}
+
+		@Override
+		public void mousePressed(MouseEvent e) {
+			// TODO Auto-generated method stub
+			int x = e.getX();
+			int y = e.getY();
+			System.out.println("mousePressed X: " + x + " - Y: " + y);
+			object.drawing(x, y);
+
+		}
+
+		@Override
+		public void mouseReleased(MouseEvent e) {
+			// TODO Auto-generated method stub
+			int x = e.getX();
+			int y = e.getY();
+			System.out.println("mouseReleased X: " + x + " - Y: " + y);
+			object.drawing(x, y);
+
+		}
+
+		@Override
+		public void mouseDragged(MouseEvent e) {
+			// TODO Auto-generated method stub
+			int x = e.getX();
+			int y = e.getY();
+			System.out.println("mouseDragged X: " + x + " - Y: " + y);
+			
+		}
+
+		@Override
+		public void mouseMoved(MouseEvent e) {
+			// TODO Auto-generated method stub
+			int x = e.getX();
+			int y = e.getY();
+			System.out.println("mouseMoved X: " + x + " - Y: " + y);
+			object.drawing(x, y);
+		}
 	}
-
-	@Override
-	public void mouseEntered(MouseEvent e) {
-		// TODO Auto-generated method stub
-		int x = e.getX();
-		int y = e.getY();
-		System.out.println("mouseEntered " + x + " - Y: " + y);
-
-	}
-
-	@Override
-	public void mouseExited(MouseEvent e) {
-		// TODO Auto-generated method stub
-		int x = e.getX();
-		int y = e.getY();
-		System.out.println("mouseExited " + x + " - Y: " + y);
-
-	}
-
-	@Override
-	public void mousePressed(MouseEvent e) {
-		// TODO Auto-generated method stub
-		int x = e.getX();
-		int y = e.getY();
-		System.out.println("mousePressed X: " + x + " - Y: " + y);
-
-	}
-
-	@Override
-	public void mouseReleased(MouseEvent e) {
-		// TODO Auto-generated method stub
-		int x = e.getX();
-		int y = e.getY();
-		System.out.println("mouseReleased X: " + x + " - Y: " + y);
-
-	}
-
-	@Override
-	public void mouseDragged(MouseEvent e) {
-		// TODO Auto-generated method stub
-		int x = e.getX();
-		int y = e.getY();
-		System.out.println("mouseDragged X: " + x + " - Y: " + y);
-		
-	}
-
-	@Override
-	public void mouseMoved(MouseEvent e) {
-		// TODO Auto-generated method stub
-		int x = e.getX();
-		int y = e.getY();
-		System.out.println("mouseMoved X: " + x + " - Y: " + y);
-	}
-
 }
