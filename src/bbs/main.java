@@ -1,30 +1,12 @@
 package bbs;
 
-import java.awt.BorderLayout;
-import java.awt.EventQueue;
+import java.awt.*;
+import java.awt.event.*;
 
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
-import javax.swing.JSplitPane;
-import javax.swing.JRadioButton;
-import javax.swing.JMenuBar;
-import javax.swing.JMenu;
-import javax.swing.JMenuItem;
-import java.awt.Panel;
-import java.awt.FlowLayout;
-import java.awt.GridLayout;
-import javax.swing.JCheckBox;
-import javax.swing.UIManager;
-import javax.swing.JToggleButton;
-import java.awt.Color;
-import java.awt.Button;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
-import javax.swing.JButton;
-import javax.swing.border.LineBorder;
+import javax.swing.*;
+import javax.swing.border.*;
 
-public class main extends JFrame {
+public class main extends JFrame implements MouseMotionListener, MouseListener{
 
 	private JPanel contentPane;
 
@@ -130,5 +112,47 @@ public class main extends JFrame {
 		panel_3.setBorder(new LineBorder(new Color(0, 0, 0)));
 		panel_3.setBounds(12, 464, 860, 67);
 		contentPane.add(panel_3);
+	}
+
+	@Override
+	public void mouseDragged(MouseEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void mouseMoved(MouseEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void mouseClicked(MouseEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void mousePressed(MouseEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void mouseReleased(MouseEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void mouseEntered(MouseEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void mouseExited(MouseEvent e) {
+		// TODO Auto-generated method stub
+		
 	}
 }
