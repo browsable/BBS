@@ -6,7 +6,7 @@ import java.awt.event.*;
 import javax.swing.*;
 import javax.swing.border.*;
 
-public class main extends JFrame implements MouseListener,MouseMotionListener {
+public class Main extends JFrame implements MouseListener,MouseMotionListener {
 
 	private JPanel contentPane;
 	public JLabel label;
@@ -17,7 +17,7 @@ public class main extends JFrame implements MouseListener,MouseMotionListener {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					main frame = new main();
+					Main frame = new Main();
 					frame.setVisible(true);
 
 				} catch (Exception e) {
@@ -31,7 +31,7 @@ public class main extends JFrame implements MouseListener,MouseMotionListener {
 	 * Create the frame. hihi
 	 */
 
-	public main() {
+	public Main() {
 		setTitle("BBS-Bread");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
