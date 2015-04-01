@@ -45,7 +45,7 @@ public class main extends JFrame {
 	}
 
 	/**
-	 * Create the frame. hi
+	 * Create the frame. hihihihihi
 	 */
 	public main() {
 		setTitle("BBS-Bread");
