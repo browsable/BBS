@@ -1,4 +1,4 @@
-package project2;
+package bbs;
 
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
@@ -45,7 +45,7 @@ public class main extends JFrame {
 	}
 
 	/**
-	 * Create the frame.
+	 * Create the frame. hi
 	 */
 	public main() {
 		setTitle("BBS-Bread");
