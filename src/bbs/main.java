@@ -45,8 +45,9 @@ public class main extends JFrame {
 	}
 
 	/**
-	 * Create the frame. hihihihihi
+	 * Create the frame.
 	 */
+	
 	public main() {
 		setTitle("BBS-Bread");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
