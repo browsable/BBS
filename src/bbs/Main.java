@@ -25,7 +25,7 @@ public class Main extends JFrame implements MouseListener,MouseMotionListener {
 	}
 
 	/**
-	 * Create the frame. hihihihi
+	 * Create the frame. 
 	 */
 
 	public Main() {
