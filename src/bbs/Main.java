@@ -19,7 +19,7 @@ public class Main extends JFrame implements MouseListener,MouseMotionListener {
 
 				} catch (Exception e) {
 					e.printStackTrace();
-				}
+				} 
 			}
 		});
 	}
