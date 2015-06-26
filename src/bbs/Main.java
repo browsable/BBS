@@ -35,7 +35,7 @@ public class Main extends JFrame implements MouseListener,MouseMotionListener {
 
 		setBounds(100, 100, 900, 600);
 		label = new JLabel("No Mouse Event Captured", JLabel.CENTER);
-		add(label);
+		getContentPane().add(label);
 		addMouseListener(this);
 		addMouseMotionListener(this);
 		JMenuBar menuBar = new JMenuBar();
@@ -94,11 +94,17 @@ public class Main extends JFrame implements MouseListener,MouseMotionListener {
 		contentPane.add(panel_1);
 		panel_1.setLayout(null);
 
+		
+		
+		
 		JPanel panel_2 = new JPanel();
 		panel_2.setBackground(new Color(255, 228, 196));
 		panel_2.setBounds(141, 42, 446, 307);
 		panel_1.add(panel_2);
 
+		
+		
+		
 		JRadioButton rdbtnRed = new JRadioButton("RED");
 		rdbtnRed.setBounds(8, 6, 55, 23);
 		panel_1.add(rdbtnRed);
