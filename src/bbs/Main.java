@@ -2,7 +2,6 @@ package bbs;
 
 import java.awt.*;
 import java.awt.event.*;
-
 import javax.swing.*;
 import javax.swing.border.*;
 
@@ -35,7 +34,7 @@ public class Main extends JFrame implements MouseListener,MouseMotionListener {
 	//
 
 	/**
-	 * Create the frame.  adlfkajsldfk
+	 * Create the frame.  
 	 */
 
 	public Main() {
