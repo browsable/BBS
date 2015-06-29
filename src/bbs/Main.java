@@ -10,7 +10,16 @@ public class Main extends JFrame implements MouseListener,MouseMotionListener {
 
 	private JPanel contentPane;
 	public JLabel label;
+	private ButtonGroup radioGroup;
+	private final Color colorValues[] = {Color.RED, Color.BLACK, Color.WHITE};
+	
 	public static void main(String[] args) {
+		
+		
+		Main application = new Main();
+		application.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
@@ -680,27 +689,50 @@ public class Main extends JFrame implements MouseListener,MouseMotionListener {
 		button_141.setBounds(415, 283, 21, 16);
 		panel_2.add(button_141);
 
+	
+	
 		
+		//radio 버튼 구
 		
-		
-		JRadioButton rdbtnRed = new JRadioButton("RED");
+		JRadioButton rdbtnRed = new JRadioButton("RED", true);
 		rdbtnRed.setBounds(8, 6, 55, 23);
 		panel_1.add(rdbtnRed);
 
-		JRadioButton rdbtnNewRadioButton = new JRadioButton("Black");
+		JRadioButton rdbtnNewRadioButton = new JRadioButton("Black", false);
 		rdbtnNewRadioButton.setBounds(67, 6, 70, 23);
 		panel_1.add(rdbtnNewRadioButton);
 
-		JRadioButton rdbtnWhite = new JRadioButton("White");
+		JRadioButton rdbtnWhite = new JRadioButton("White", false);
 		rdbtnWhite.setBounds(141, 6, 70, 23);
 		panel_1.add(rdbtnWhite);
 
+		radioGroup = new ButtonGroup();
+		radioGroup.add(rdbtnRed);
+		radioGroup.add(rdbtnNewRadioButton);
+		radioGroup.add(rdbtnWhite);
+		
+		//rdbtnRed.addItemListener( new RadioButtonHandler( ));
+		//rdbtnNewRadioButton.addItemListener( new RadioButtonHandler( ));
+		//rdbtnWhite.addItemListener( new RadioButtonHandler( ));
+		
+		
 		JPanel panel_3 = new JPanel();
 		panel_3.setBorder(new LineBorder(new Color(0, 0, 0)));
 		panel_3.setBounds(12, 464, 860, 67);
 		contentPane.add(panel_3);
+		
+		
 	}
 
+	public void paint(Graphics g){
+		
+		super.paint(g);
+		g.setColor(Color.RED);
+		g.drawLine(330, 178, 350, 178);
+		
+		
+	}
+	
 
 	@Override
 	public void mouseClicked(MouseEvent e) {
