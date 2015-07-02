@@ -2,11 +2,16 @@ package bbs;
 
 import java.awt.*;
 import java.awt.event.*;
+
 import javax.swing.*;
 import javax.swing.border.*;
 
 public class Main extends JFrame implements MouseListener,MouseMotionListener {
-
+	//--------------------------------------------------------------------------------------------
+	private Point p1 = new Point(0, 0);
+	private Point p2 = new Point(0, 0);
+	private boolean drawing;
+	//--------------------------------------------------------------------------------------------
 	private JPanel contentPane;
 	public JLabel label;
 	private ButtonGroup radioGroup;
@@ -24,6 +29,9 @@ public class Main extends JFrame implements MouseListener,MouseMotionListener {
 				try {
 					Main frame = new Main();
 					frame.setVisible(true);
+					//--------------------------------------------------------------------------------------------
+					new Main().display();
+					//--------------------------------------------------------------------------------------------
 
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -695,7 +703,7 @@ public class Main extends JFrame implements MouseListener,MouseMotionListener {
 	
 	
 		
-		//radio 버튼 구
+		//radio 踰꾪듉 援�
 		
 		JRadioButton rdbtnRed = new JRadioButton("RED", true);
 		rdbtnRed.setBounds(8, 6, 55, 23);
@@ -728,15 +736,84 @@ public class Main extends JFrame implements MouseListener,MouseMotionListener {
 	}
 
 	public void paint(Graphics g){
-		
 		super.paint(g);
 		g.setColor(Color.RED);
 		g.drawLine(330, 178, 350, 178);
+		//--------------------------------------------------------------------------------------------
+		Graphics2D g2d = (Graphics2D) g;
+		g2d.setColor(Color.black);
+		/*
 		
-		
+		if(rdbtnRed){
+			g2d.setColor(Color.red);
+		}
+		else if(rdbtnNewRadioButton){
+			g2d.setColor(Color.black);
+		}
+		else if(rdbtnWhite){
+			g2d.setColor(Color.white);
+		}
+		*/
+		g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+		g2d.setStroke(new BasicStroke(9, BasicStroke.CAP_ROUND, BasicStroke.JOIN_BEVEL));
+		g.drawLine(p1.x, p1.y, p2.x, p2.y);
+		//--------------------------------------------------------------------------------------------
+	}
+	//--------------------------------------------------------------------------------------------
+	@Override
+	public void mousePressed(MouseEvent e){
+		drawing = true;
+		p1 = e.getPoint();
+		p2 = p1;
+		repaint();
 	}
 	
+	@Override
+	public void mouseReleased(MouseEvent e){
+		drawing = false;
+		p2 = e.getPoint();
+		repaint();
+	}
+	
+	@Override
+	public void mouseDragged(MouseEvent e){
+		if(drawing){
+			p2 = e.getPoint();
+			repaint();
+		}
+	}
+	
+	void display(){
+		JFrame f = new JFrame("LinePanel");
+		f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		f.add(this);
+		f.pack();
+		f.setLocationRelativeTo(null);
+		f.setVisible(true);
+	}
+	
+	@Override
+	public void mouseMoved(MouseEvent arg0) {
+		// TODO Auto-generated method stub
+	}
 
+	@Override
+	public void mouseClicked(MouseEvent e) {
+		// TODO Auto-generated method stub
+	}
+
+	@Override
+	public void mouseEntered(MouseEvent e) {
+		// TODO Auto-generated method stub
+	}
+
+	@Override
+	public void mouseExited(MouseEvent e) {
+		// TODO Auto-generated method stub
+		System.out.println("버튼 위");
+	}
+	//--------------------------------------------------------------------------------------------
+/*
 	@Override
 	public void mouseClicked(MouseEvent e) {
 		// TODO Auto-generated method stub
@@ -798,4 +875,5 @@ public class Main extends JFrame implements MouseListener,MouseMotionListener {
 		int y = e.getY();
 		System.out.println("mouseMoved X: " + x + " - Y: " + y);
 	}
+*/
 }
