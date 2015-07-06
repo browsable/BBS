@@ -1,20 +1,69 @@
 package bbs;
 
-import java.awt.*;
-import java.awt.event.*;
+import java.awt.BasicStroke;
+import java.awt.Color;
+import java.awt.EventQueue;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.Point;
+import java.awt.RenderingHints;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.ItemListener;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+import java.awt.event.MouseMotionListener;
 
-import javax.swing.*;
-import javax.swing.border.*;
+import javax.swing.ButtonGroup;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
+import javax.swing.JPanel;
+import javax.swing.JRadioButton;
+import javax.swing.UIManager;
+import javax.swing.border.EmptyBorder;
+import javax.swing.border.LineBorder;
 
 public class Main extends JFrame implements MouseListener,MouseMotionListener {
 	//--------------------------------------------------------------------------------------------
 	private Point p1 = new Point(0, 0);
 	private Point p2 = new Point(0, 0);
 	private boolean drawing;
+	int i = 0;
 	//--------------------------------------------------------------------------------------------
 	private JPanel contentPane;
 	public JLabel label;
 	private ButtonGroup radioGroup;
+	JRadioButton rdbtnRed, rdbtnNewRadioButton, rdbtnWhite;
+	Graphics2D g2d;
+	
+	public JRadioButton getRdbtnRed() {
+		return rdbtnRed;
+	}
+
+	public void setRdbtnRed(JRadioButton rdbtnRed) {
+		this.rdbtnRed = rdbtnRed;
+	}
+
+	public JRadioButton getRdbtnNewRadioButton() {
+		return rdbtnNewRadioButton;
+	}
+
+	public void setRdbtnNewRadioButton(JRadioButton rdbtnNewRadioButton) {
+		this.rdbtnNewRadioButton = rdbtnNewRadioButton;
+	}
+
+	public JRadioButton getRdbtnWhite() {
+		return rdbtnWhite;
+	}
+
+	public void setRdbtnWhite(JRadioButton rdbtnWhite) {
+		this.rdbtnWhite = rdbtnWhite;
+	}
+
 	private final Color colorValues[] = {Color.RED, Color.BLACK, Color.WHITE};
 	
 	public static void main(String[] args) {
@@ -703,17 +752,17 @@ public class Main extends JFrame implements MouseListener,MouseMotionListener {
 	
 	
 		
-		//radio 踰꾪듉 援�
+		//radio 甕곌쑵�뱣 �뤃占�
 		
-		JRadioButton rdbtnRed = new JRadioButton("RED", true);
+		rdbtnRed = new JRadioButton("RED", true);
 		rdbtnRed.setBounds(8, 6, 55, 23);
 		panel_1.add(rdbtnRed);
 
-		JRadioButton rdbtnNewRadioButton = new JRadioButton("Black", false);
+		rdbtnNewRadioButton = new JRadioButton("Black", false);
 		rdbtnNewRadioButton.setBounds(67, 6, 70, 23);
 		panel_1.add(rdbtnNewRadioButton);
 
-		JRadioButton rdbtnWhite = new JRadioButton("White", false);
+		rdbtnWhite = new JRadioButton("White", false);
 		rdbtnWhite.setBounds(141, 6, 70, 23);
 		panel_1.add(rdbtnWhite);
 
@@ -721,10 +770,6 @@ public class Main extends JFrame implements MouseListener,MouseMotionListener {
 		radioGroup.add(rdbtnRed);
 		radioGroup.add(rdbtnNewRadioButton);
 		radioGroup.add(rdbtnWhite);
-		
-		//rdbtnRed.addItemListener( new RadioButtonHandler( ));
-		//rdbtnNewRadioButton.addItemListener( new RadioButtonHandler( ));
-		//rdbtnWhite.addItemListener( new RadioButtonHandler( ));
 		
 		
 		JPanel panel_3 = new JPanel();
@@ -734,26 +779,49 @@ public class Main extends JFrame implements MouseListener,MouseMotionListener {
 		
 		
 	}
-
 	public void paint(Graphics g){
 		super.paint(g);
+		
 		g.setColor(Color.RED);
 		g.drawLine(330, 178, 350, 178);
 		//--------------------------------------------------------------------------------------------
-		Graphics2D g2d = (Graphics2D) g;
-		g2d.setColor(Color.black);
-		/*
-		
-		if(rdbtnRed){
-			g2d.setColor(Color.red);
+		g2d = (Graphics2D) g;
+		//g2d.setColor(Color.black);
+		getRdbtnRed().addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				i = 0;
+			}
+		});
+		getRdbtnNewRadioButton().addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				i = 1;
+			}
+		});
+		getRdbtnWhite().addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				i = 2;
+			}
+		});
+		switch(i){
+			case 0:
+				g2d.setColor(Color.red);
+				break;
+			case 1:
+				g2d.setColor(Color.black);
+				break;
+			case 2:
+				g2d.setColor(Color.white);
+				break;
 		}
-		else if(rdbtnNewRadioButton){
-			g2d.setColor(Color.black);
-		}
-		else if(rdbtnWhite){
-			g2d.setColor(Color.white);
-		}
-		*/
 		g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
 		g2d.setStroke(new BasicStroke(9, BasicStroke.CAP_ROUND, BasicStroke.JOIN_BEVEL));
 		g.drawLine(p1.x, p1.y, p2.x, p2.y);
@@ -810,7 +878,7 @@ public class Main extends JFrame implements MouseListener,MouseMotionListener {
 	@Override
 	public void mouseExited(MouseEvent e) {
 		// TODO Auto-generated method stub
-		System.out.println("버튼 위");
+		System.out.println("踰꾪듉 �쐞");
 	}
 	//--------------------------------------------------------------------------------------------
 /*
