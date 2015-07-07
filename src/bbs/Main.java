@@ -14,6 +14,7 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
 
+import javax.swing.AbstractButton;
 import javax.swing.ButtonGroup;
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -33,12 +34,17 @@ public class Main extends JFrame implements MouseListener,MouseMotionListener {
 	private Point p2 = new Point(0, 0);
 	private boolean drawing;
 	int i = 0;
+	int x1 = 0, x2 = 0, y1 = 0, y2 = 0; 
 	//--------------------------------------------------------------------------------------------
 	private JPanel contentPane;
 	public JLabel label;
 	private ButtonGroup radioGroup;
 	JRadioButton rdbtnRed, rdbtnNewRadioButton, rdbtnWhite;
 	Graphics2D g2d;
+	private JButton button;
+	private JButton button_1;
+	private JButton button_2;
+	private JButton button_3;
 	
 	public JRadioButton getRdbtnRed() {
 		return rdbtnRed;
@@ -64,6 +70,48 @@ public class Main extends JFrame implements MouseListener,MouseMotionListener {
 		this.rdbtnWhite = rdbtnWhite;
 	}
 
+	
+	// button methods
+	public void setButton(JButton button){
+		
+		this.button = button;
+	}
+	
+	public JButton getButton(){
+		return button;
+	}
+	
+
+	public void setButton_1(JButton button_1){
+		
+		this.button_1 = button_1;
+	}
+	
+	public JButton getButton_1(){
+		return button_1;
+	}
+	
+	public void setButton_2(JButton button_2){
+		
+		this.button_2 = button_2;
+	}
+	
+	public JButton getButton_2(){
+		return button_2;
+	}
+	
+
+	public void setButton_3(JButton button_3){
+		
+		this.button_3 = button_3;
+	}
+	
+	public JButton getButton_3(){
+		return button_3;
+	}
+	
+	
+	
 	private final Color colorValues[] = {Color.RED, Color.BLACK, Color.WHITE};
 	
 	public static void main(String[] args) {
@@ -181,19 +229,22 @@ public class Main extends JFrame implements MouseListener,MouseMotionListener {
 		btnHole.setBounds(19, 19, 21, 16);
 		panel_2.add(btnHole);
 		
-		JButton button = new JButton("hole");
+		
+		
+		
+	    button = new JButton("hole");
 		button.setBounds(52, 19, 21, 16);
 		panel_2.add(button);
 		
-		JButton button_1 = new JButton("hole");
+		button_1 = new JButton("hole");
 		button_1.setBounds(85, 19, 21, 16);
 		panel_2.add(button_1);
 		
-		JButton button_2 = new JButton("hole");
+		button_2 = new JButton("hole");
 		button_2.setBounds(118, 19, 21, 16);
 		panel_2.add(button_2);
 		
-		JButton button_3 = new JButton("hole");
+		button_3 = new JButton("hole");
 		button_3.setBounds(151, 19, 21, 16);
 		panel_2.add(button_3);
 		
@@ -750,7 +801,9 @@ public class Main extends JFrame implements MouseListener,MouseMotionListener {
 		panel_2.add(button_141);
 
 	
-	
+		
+		
+		
 		
 		//radio 甕곌쑵�뱣 �뤃占�
 		
@@ -779,11 +832,13 @@ public class Main extends JFrame implements MouseListener,MouseMotionListener {
 		
 		
 	}
+	
+	
+	
 	public void paint(Graphics g){
 		super.paint(g);
+	
 		
-		g.setColor(Color.RED);
-		g.drawLine(330, 178, 350, 178);
 		//--------------------------------------------------------------------------------------------
 		g2d = (Graphics2D) g;
 		//g2d.setColor(Color.black);
@@ -811,6 +866,77 @@ public class Main extends JFrame implements MouseListener,MouseMotionListener {
 				i = 2;
 			}
 		});
+		
+		
+		
+	
+		
+      // button action listener==============================================
+		getButton().addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				if( x1 == 0){
+			
+					x1 = 365;
+					y1 = 120;
+					
+				}
+				else{
+					
+					x2 = 365;
+					y2 = 120;
+				}
+				
+			}
+		});
+		
+		getButton_1().addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				
+				if( x1 == 0){
+					
+					x1 = 398;
+					y1 = 120;
+					
+				}
+				else{
+					
+					x2 = 398;
+					y2 = 120;
+				}
+					
+				
+			}
+		});
+		
+		
+		getButton_2().addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				
+				if( x1 == 0){
+					
+					x1 = 431;
+					y1 = 120;
+					
+				}
+				else{
+					
+					x2 = 431;
+					y2 = 120;
+				}
+				
+			}
+		});
+		
+	
 		switch(i){
 			case 0:
 				g2d.setColor(Color.red);
@@ -824,9 +950,19 @@ public class Main extends JFrame implements MouseListener,MouseMotionListener {
 		}
 		g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
 		g2d.setStroke(new BasicStroke(9, BasicStroke.CAP_ROUND, BasicStroke.JOIN_BEVEL));
-		g.drawLine(p1.x, p1.y, p2.x, p2.y);
+		
+		g.drawLine(x1, y1, x2, y2);
+		
 		//--------------------------------------------------------------------------------------------
 	}
+	
+	
+	
+	private AbstractButton getbutton() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 	//--------------------------------------------------------------------------------------------
 	@Override
 	public void mousePressed(MouseEvent e){
