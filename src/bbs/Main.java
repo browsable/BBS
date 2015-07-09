@@ -51,7 +51,13 @@ public class Main extends JFrame implements MouseListener,MouseMotionListener {
 	private JButton button;
 	private JButton button_1;
 	private JButton button_2;
-	private JButton button_3;
+	private JButton button_3,button_4,button_5,button_6,button_7,button_8,button_9,button_10,button_11,button_12,button_13,button_14,
+	                button_15, button_16,button_17,button_18,button_19,button_20,button_21,button_22,button_23, button_24, button_25,
+	                button_26, button_27, button_28, button_29, button_30, button_31, button_32, button_33, button_34, button_35, button_36,
+	                button_37, button_38, button_39, button_40, button_41, button_42, button_43, button_44, button_45, button_46, button_47,
+	                button_48, button_49, button_50, button_51, button_52, button_53, button_54, button_55, button_56, button_57, button_58,
+	                button_59, button_60, button_61, button_62, button_63, button_64, button_65, button_66, button_67, button_68, button_69, 
+	                button_70;
 	
 	public JRadioButton getRdbtnRed() {
 		return rdbtnRed;
@@ -116,6 +122,268 @@ public class Main extends JFrame implements MouseListener,MouseMotionListener {
 	public JButton getButton_3(){
 		return button_3;
 	}
+	
+	public void setButton_4(JButton button_3){
+		
+		this.button_4 = button_4;
+	}
+	
+	public JButton getButton_4(){
+		return button_4;
+	}
+	
+	public void setButton_5(JButton button_5){
+		
+		this.button_5 = button_5;
+	}
+	
+	public JButton getButton_5(){
+		return button_5;
+	}
+	
+	public void setButton_6(JButton button_6){
+		
+		this.button_6 = button_6;
+	}
+	
+	public JButton getButton_6(){
+		return button_6;
+	}
+	
+	public void setButton_7(JButton button_7){
+		
+		this.button_7 = button_7;
+	}
+	
+	public JButton getButton_7(){
+		return button_7;
+	}
+	public void setButton_8(JButton button_3){
+		
+		this.button_8 = button_8;
+	}
+	
+	public JButton getButton_8(){
+		return button_8;
+	}
+	
+	public void setButton_9(JButton button_9){
+		
+		this.button_9 = button_9;
+	}
+	
+	public JButton getButton_9(){
+		return button_9;
+	}
+	public void setButton_10(JButton button_10){
+		
+		this.button_10 = button_10;
+	}
+	
+	public JButton getButton_10(){
+		return button_10;
+	}
+	public void setButton_11(JButton button_11){
+		
+		this.button_11 = button_11;
+	}
+	
+	public JButton getButton_11(){
+		return button_11;
+	}
+	public void setButton_12(JButton button_12){
+		
+		this.button_12 = button_12;
+	}
+	
+	public JButton getButton_12(){
+		return button_12;
+	}
+	public void setButton_13(JButton button_13){
+		
+		this.button_13 = button_13;
+	}
+	
+	public JButton getButton_13(){
+		return button_13;
+	}
+	public void setButton_14(JButton button_14){
+		
+		this.button_14 = button_14;
+	}
+	
+	public JButton getButton_14(){
+		return button_14;
+	}
+	public void setButton_15(JButton button_15){
+		
+		this.button_15 = button_15;
+	}
+	
+	public JButton getButton_15(){
+		return button_15;
+	}
+	public void setButton_16(JButton button_16){
+		
+		this.button_16 = button_16;
+	}
+	
+	public JButton getButton_16(){
+		return button_16;
+	}
+	public void setButton_17(JButton button_17){
+		
+		this.button_17 = button_17;
+	}
+	
+	public JButton getButton_17(){
+		return button_17;
+	}
+	public void setButton_18(JButton button_18){
+		
+		this.button_18 = button_18;
+	}
+	
+	public JButton getButton_18(){
+		return button_18;
+	}
+	public void setButton_19(JButton button_19){
+		
+		this.button_19 = button_19;
+	}
+	
+	public JButton getButton_19(){
+		return button_19;
+	}
+	public void setButton_20(JButton button_20){
+		
+		this.button_20 = button_20;
+	}
+	
+	public JButton getButton_20(){
+		return button_20;
+	}
+	public void setButton_21(JButton button_21){
+		
+		this.button_21 = button_21;
+	}
+	
+	public JButton getButton_21(){
+		return button_21;
+	}
+	public void setButton_22(JButton button_22){
+		
+		this.button_22 = button_22;
+	}
+	
+	public JButton getButton_22(){
+		return button_22;
+	}
+	public void setButton_23(JButton button_23){
+		
+		this.button_23 = button_23;
+	}
+	
+	public JButton getButton_23(){
+		return button_23;
+	}
+	public void setButton_24(JButton button_24){
+		
+		this.button_24 = button_24;
+	}
+	
+	public JButton getButton_24(){
+		return button_24;
+	}
+	public void setButton_25(JButton button_25){
+		
+		this.button_25 = button_25;
+	}
+	
+	public JButton getButton_25(){
+		return button_25;
+	}
+	public void setButton_27(JButton button_27){
+		
+		this.button_27 = button_27;
+	}
+	
+	public JButton getButton_27(){
+		return button_27;
+	}
+	public void setButton_26(JButton button_26){
+		
+		this.button_26 = button_26;
+	}
+	
+	public JButton getButton_26(){
+		return button_26;
+	}
+	public void setButton_28(JButton button_28){
+		
+		this.button_28 = button_28;
+	}
+	
+	public JButton getButton_28(){
+		return button_28;
+	}
+	public void setButton_29(JButton button_29){
+		
+		this.button_29 = button_29;
+	}
+	
+	public JButton getButton_29(){
+		return button_29;
+	}
+	public void setButton_30(JButton button_30){
+		
+		this.button_30 = button_30;
+	}
+	
+	public JButton getButton_30(){
+		return button_30;
+	}
+	public void setButton_31(JButton button_31){
+		
+		this.button_31 = button_31;
+	}
+	
+	public JButton getButton_31(){
+		return button_31;
+	}
+	public void setButton_32(JButton button_32){
+		
+		this.button_32 = button_32;
+	}
+	
+	public JButton getButton_33(){
+		return button_33;
+	}
+	public void setButton_34(JButton button_34){
+		
+		this.button_34 = button_34;
+	}
+	
+	public JButton getButton_34(){
+		return button_34;
+	}
+	public void setButton_35(JButton button_35){
+		
+		this.button_35 = button_35;
+	}
+	
+	public JButton getButton_35(){
+		return button_35;
+	}
+	public void setButton_36(JButton button_36){
+		
+		this.button_36 = button_36;
+	}
+	
+	public JButton getButton_36(){
+		return button_36;
+	}
+	
 	
 	
 	
@@ -293,267 +561,267 @@ public class Main extends JFrame implements MouseListener,MouseMotionListener {
 		button_3.setBounds(151, 19, 21, 16);
 		panel_2.add(button_3);
 		
-		JButton button_4 = new JButton("hole");
+		button_4 = new JButton("hole");
 		button_4.setBounds(184, 19, 21, 16);
 		panel_2.add(button_4);
 		
-		JButton button_5 = new JButton("hole");
+	    button_5 = new JButton("hole");
 		button_5.setBounds(217, 19, 21, 16);
 		panel_2.add(button_5);
 		
-		JButton button_6 = new JButton("hole");
+	    button_6 = new JButton("hole");
 		button_6.setBounds(250, 19, 21, 16);
 		panel_2.add(button_6);
 		
-		JButton button_7 = new JButton("hole");
+		button_7 = new JButton("hole");
 		button_7.setBounds(283, 19, 21, 16);
 		panel_2.add(button_7);
 		
-		JButton button_8 = new JButton("hole");
+		button_8 = new JButton("hole");
 		button_8.setBounds(316, 19, 21, 16);
 		panel_2.add(button_8);
 		
-		JButton button_9 = new JButton("hole");
+		button_9 = new JButton("hole");
 		button_9.setBounds(349, 19, 21, 16);
 		panel_2.add(button_9);
 		
-		JButton button_10 = new JButton("hole");
+		button_10 = new JButton("hole");
 		button_10.setBounds(382, 19, 21, 16);
 		panel_2.add(button_10);
 		
-		JButton button_11 = new JButton("hole");
+		button_11 = new JButton("hole");
 		button_11.setBounds(415, 19, 21, 16);
 		panel_2.add(button_11);
 		
-		JButton button_12 = new JButton("hole");
+		button_12 = new JButton("hole");
 		button_12.setBounds(448, 19, 21, 16);
 		panel_2.add(button_12);
 		
-		JButton button_13 = new JButton("hole");
+		button_13 = new JButton("hole");
 		button_13.setBounds(85, 47, 21, 16);
 		panel_2.add(button_13);
 		
-		JButton button_14 = new JButton("hole");
+		button_14 = new JButton("hole");
 		button_14.setBounds(118, 47, 21, 16);
 		panel_2.add(button_14);
 		
-		JButton button_15 = new JButton("hole");
+		button_15 = new JButton("hole");
 		button_15.setBounds(151, 47, 21, 16);
 		panel_2.add(button_15);
 		
-		JButton button_16 = new JButton("hole");
+		button_16 = new JButton("hole");
 		button_16.setBounds(184, 47, 21, 16);
 		panel_2.add(button_16);
 		
-		JButton button_17 = new JButton("hole");
+		button_17 = new JButton("hole");
 		button_17.setBounds(217, 47, 21, 16);
 		panel_2.add(button_17);
 		
-		JButton button_18 = new JButton("hole");
+		button_18 = new JButton("hole");
 		button_18.setBounds(250, 47, 21, 16);
 		panel_2.add(button_18);
 		
-		JButton button_19 = new JButton("hole");
+		button_19 = new JButton("hole");
 		button_19.setBounds(283, 47, 21, 16);
 		panel_2.add(button_19);
 		
-		JButton button_20 = new JButton("hole");
+		button_20 = new JButton("hole");
 		button_20.setBounds(316, 47, 21, 16);
 		panel_2.add(button_20);
 		
-		JButton button_21 = new JButton("hole");
+		button_21 = new JButton("hole");
 		button_21.setBounds(349, 47, 21, 16);
 		panel_2.add(button_21);
 		
-		JButton button_22 = new JButton("hole");
+		button_22 = new JButton("hole");
 		button_22.setBounds(382, 47, 21, 16);
 		panel_2.add(button_22);
 		
-		JButton button_23 = new JButton("hole");
+		button_23 = new JButton("hole");
 		button_23.setBounds(19, 85, 21, 16);
 		panel_2.add(button_23);
 		
-		JButton button_24 = new JButton("hole");
+		button_24 = new JButton("hole");
 		button_24.setBounds(52, 85, 21, 16);
 		panel_2.add(button_24);
 		
-		JButton button_25 = new JButton("hole");
+		button_25 = new JButton("hole");
 		button_25.setBounds(85, 85, 21, 16);
 		panel_2.add(button_25);
 		
-		JButton button_26 = new JButton("hole");
+		button_26 = new JButton("hole");
 		button_26.setBounds(118, 85, 21, 16);
 		panel_2.add(button_26);
 		
-		JButton button_27 = new JButton("hole");
+		button_27 = new JButton("hole");
 		button_27.setBounds(151, 85, 21, 16);
 		panel_2.add(button_27);
 		
-		JButton button_28 = new JButton("hole");
+		button_28 = new JButton("hole");
 		button_28.setBounds(184, 85, 21, 16);
 		panel_2.add(button_28);
 		
-		JButton button_29 = new JButton("hole");
+		button_29 = new JButton("hole");
 		button_29.setBounds(217, 85, 21, 16);
 		panel_2.add(button_29);
 		
-		JButton button_30 = new JButton("hole");
+		button_30 = new JButton("hole");
 		button_30.setBounds(250, 85, 21, 16);
 		panel_2.add(button_30);
 		
-		JButton button_31 = new JButton("hole");
+		button_31 = new JButton("hole");
 		button_31.setBounds(283, 85, 21, 16);
 		panel_2.add(button_31);
 		
-		JButton button_32 = new JButton("hole");
+		button_32 = new JButton("hole");
 		button_32.setBounds(316, 85, 21, 16);
 		panel_2.add(button_32);
 		
-		JButton button_33 = new JButton("hole");
+		button_33 = new JButton("hole");
 		button_33.setBounds(349, 85, 21, 16);
 		panel_2.add(button_33);
 		
-		JButton button_34 = new JButton("hole");
+		button_34 = new JButton("hole");
 		button_34.setBounds(382, 85, 21, 16);
 		panel_2.add(button_34);
 		
-		JButton button_36 = new JButton("hole");
+		button_36 = new JButton("hole");
 		button_36.setBounds(415, 47, 21, 16);
 		panel_2.add(button_36);
 		
-		JButton button_37 = new JButton("hole");
+		button_37 = new JButton("hole");
 		button_37.setBounds(415, 85, 21, 16);
 		panel_2.add(button_37);
 		
-		JButton button_38 = new JButton("hole");
+		button_38 = new JButton("hole");
 		button_38.setBounds(19, 108, 21, 16);
 		panel_2.add(button_38);
 		
-		JButton button_39 = new JButton("hole");
+		button_39 = new JButton("hole");
 		button_39.setBounds(52, 108, 21, 16);
 		panel_2.add(button_39);
 		
-		JButton button_40 = new JButton("hole");
+		button_40 = new JButton("hole");
 		button_40.setBounds(85, 108, 21, 16);
 		panel_2.add(button_40);
 		
-		JButton button_41 = new JButton("hole");
+		button_41 = new JButton("hole");
 		button_41.setBounds(118, 108, 21, 16);
 		panel_2.add(button_41);
 		
-		JButton button_42 = new JButton("hole");
+		button_42 = new JButton("hole");
 		button_42.setBounds(151, 108, 21, 16);
 		panel_2.add(button_42);
 		
-		JButton button_43 = new JButton("hole");
+		button_43 = new JButton("hole");
 		button_43.setBounds(184, 108, 21, 16);
 		panel_2.add(button_43);
 		
-		JButton button_44 = new JButton("hole");
+		button_44 = new JButton("hole");
 		button_44.setBounds(217, 108, 21, 16);
 		panel_2.add(button_44);
 		
-		JButton button_45 = new JButton("hole");
+		button_45 = new JButton("hole");
 		button_45.setBounds(250, 108, 21, 16);
 		panel_2.add(button_45);
 		
-		JButton button_46 = new JButton("hole");
+		button_46 = new JButton("hole");
 		button_46.setBounds(283, 108, 21, 16);
 		panel_2.add(button_46);
 		
-		JButton button_47 = new JButton("hole");
+		button_47 = new JButton("hole");
 		button_47.setBounds(316, 108, 21, 16);
 		panel_2.add(button_47);
 		
-		JButton button_48 = new JButton("hole");
+		button_48 = new JButton("hole");
 		button_48.setBounds(349, 108, 21, 16);
 		panel_2.add(button_48);
 		
-		JButton button_49 = new JButton("hole");
+		button_49 = new JButton("hole");
 		button_49.setBounds(382, 108, 21, 16);
 		panel_2.add(button_49);
 		
-		JButton button_50 = new JButton("hole");
+		button_50 = new JButton("hole");
 		button_50.setBounds(415, 108, 21, 16);
 		panel_2.add(button_50);
 		
-		JButton button_51 = new JButton("hole");
+		button_51 = new JButton("hole");
 		button_51.setBounds(19, 129, 21, 16);
 		panel_2.add(button_51);
 		
-		JButton button_52 = new JButton("hole");
+		button_52 = new JButton("hole");
 		button_52.setBounds(52, 129, 21, 16);
 		panel_2.add(button_52);
 		
-		JButton button_53 = new JButton("hole");
+		button_53 = new JButton("hole");
 		button_53.setBounds(85, 129, 21, 16);
 		panel_2.add(button_53);
 		
-		JButton button_54 = new JButton("hole");
+		button_54 = new JButton("hole");
 		button_54.setBounds(118, 129, 21, 16);
 		panel_2.add(button_54);
 		
-		JButton button_55 = new JButton("hole");
+		button_55 = new JButton("hole");
 		button_55.setBounds(151, 129, 21, 16);
 		panel_2.add(button_55);
 		
-		JButton button_56 = new JButton("hole");
+		button_56 = new JButton("hole");
 		button_56.setBounds(184, 129, 21, 16);
 		panel_2.add(button_56);
 		
-		JButton button_57 = new JButton("hole");
+		button_57 = new JButton("hole");
 		button_57.setBounds(217, 129, 21, 16);
 		panel_2.add(button_57);
 		
-		JButton button_58 = new JButton("hole");
+		button_58 = new JButton("hole");
 		button_58.setBounds(250, 129, 21, 16);
 		panel_2.add(button_58);
 		
-		JButton button_59 = new JButton("hole");
+	    button_59 = new JButton("hole");
 		button_59.setBounds(283, 129, 21, 16);
 		panel_2.add(button_59);
 		
-		JButton button_60 = new JButton("hole");
+		button_60 = new JButton("hole");
 		button_60.setBounds(316, 129, 21, 16);
 		panel_2.add(button_60);
 		
-		JButton button_61 = new JButton("hole");
+		button_61 = new JButton("hole");
 		button_61.setBounds(349, 129, 21, 16);
 		panel_2.add(button_61);
 		
-		JButton button_62 = new JButton("hole");
+		button_62 = new JButton("hole");
 		button_62.setBounds(382, 129, 21, 16);
 		panel_2.add(button_62);
 		
-		JButton button_63 = new JButton("hole");
+		button_63 = new JButton("hole");
 		button_63.setBounds(415, 129, 21, 16);
 		panel_2.add(button_63);
 		
-		JButton button_64 = new JButton("hole");
+		button_64 = new JButton("hole");
 		button_64.setBounds(19, 150, 21, 16);
 		panel_2.add(button_64);
 		
-		JButton button_65 = new JButton("hole");
+	    button_65 = new JButton("hole");
 		button_65.setBounds(52, 150, 21, 16);
 		panel_2.add(button_65);
 		
-		JButton button_66 = new JButton("hole");
+		button_66 = new JButton("hole");
 		button_66.setBounds(85, 150, 21, 16);
 		panel_2.add(button_66);
 		
-		JButton button_67 = new JButton("hole");
+		button_67 = new JButton("hole");
 		button_67.setBounds(118, 150, 21, 16);
 		panel_2.add(button_67);
 		
-		JButton button_68 = new JButton("hole");
+		button_68 = new JButton("hole");
 		button_68.setBounds(151, 150, 21, 16);
 		panel_2.add(button_68);
 		
-		JButton button_69 = new JButton("hole");
+		button_69 = new JButton("hole");
 		button_69.setBounds(184, 150, 21, 16);
 		panel_2.add(button_69);
 		
-		JButton button_70 = new JButton("hole");
+		button_70 = new JButton("hole");
 		button_70.setBounds(217, 150, 21, 16);
 		panel_2.add(button_70);
 		
@@ -1317,9 +1585,6 @@ public class Main extends JFrame implements MouseListener,MouseMotionListener {
 
 	
 		
-		
-		
-		
 		//radio 甕곌쑵�뱣 �뤃占�
 		
 		rdbtnRed = new JRadioButton("RED", true);
@@ -1391,16 +1656,16 @@ public class Main extends JFrame implements MouseListener,MouseMotionListener {
 				// TODO Auto-generated method stub
 				if( x1 == 0){
 			
-					x1 = 365;
+					x1 = 233;
 					y1 = 120;
 					
 				}
 				else{
 					
-					x2 = 365;
+					x2 = 233;
 					y2 = 120;
 				}
-				
+				repaint();
 			}
 		});
 		
@@ -1412,17 +1677,17 @@ public class Main extends JFrame implements MouseListener,MouseMotionListener {
 				
 				if( x1 == 0){
 					
-					x1 = 398;
+					x1 = 269;
 					y1 = 120;
 					
 				}
 				else{
 					
-					x2 = 398;
+					x2 = 269;
 					y2 = 120;
 				}
 					
-				
+				repaint();
 			}
 		});
 		
@@ -1435,20 +1700,355 @@ public class Main extends JFrame implements MouseListener,MouseMotionListener {
 				
 				if( x1 == 0){
 					
-					x1 = 431;
+					x1 = 301;
 					y1 = 120;
 					
 				}
 				else{
 					
-					x2 = 431;
+					x2 = 301;
 					y2 = 120;
 				}
-				
+				repaint();
 			}
 		});
 		
+	getButton_3().addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				
+				if( x1 == 0){
+					
+					x1 = 333;
+					y1 = 120;
+					
+				}
+				else{
+					
+					x2 = 333;
+					y2 = 120;
+				}
+				repaint();
+			}
+		});
 	
+	getButton_4().addActionListener(new ActionListener() {
+		
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			// TODO Auto-generated method stub
+			
+			if( x1 == 0){
+				
+				x1 = 365;
+				y1 = 120;
+				
+			}
+			else{
+				
+				x2 = 365;
+				y2 = 120;
+			}
+			repaint();
+		}
+	});
+	
+	getButton_5().addActionListener(new ActionListener() {
+		
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			// TODO Auto-generated method stub
+			
+			if( x1 == 0){
+				
+				x1 = 397;
+				y1 = 120;
+				
+			}
+			else{
+				
+				x2 = 397;
+				y2 = 120;
+			}
+			repaint();
+		}
+	});
+	getButton_6().addActionListener(new ActionListener() {
+		
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			// TODO Auto-generated method stub
+			
+			if( x1 == 0){
+				
+				x1 = 429;
+				y1 = 120;
+				
+			}
+			else{
+				
+				x2 = 429;
+				y2 = 120;
+			}
+			repaint();
+		}
+	});
+	getButton_7().addActionListener(new ActionListener() {
+		
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			// TODO Auto-generated method stub
+			
+			if( x1 == 0){
+				
+				x1 = 461;
+				y1 = 120;
+				
+			}
+			else{
+				
+				x2 = 461;
+				y2 = 120;
+			}
+			repaint();
+		}
+	});
+	
+	
+	getButton_8().addActionListener(new ActionListener() {
+		
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			// TODO Auto-generated method stub
+			
+			if( x1 == 0){
+				
+				x1 = 495;
+				y1 = 120;
+				
+			}
+			else{
+				
+				x2 = 495;
+				y2 = 120;
+			}
+			repaint();
+		}
+	});
+	
+
+	getButton_9().addActionListener(new ActionListener() {
+		
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			// TODO Auto-generated method stub
+			
+			if( x1 == 0){
+				
+				x1 = 527;
+				y1 = 120;
+				
+			}
+			else{
+				
+				x2 = 527;
+				y2 = 120;
+			}
+			repaint();
+		}
+	});
+
+	getButton_10().addActionListener(new ActionListener() {
+		
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			// TODO Auto-generated method stub
+			
+			if( x1 == 0){
+				
+				x1 = 562;
+				y1 = 120;
+				
+			}
+			else{
+				
+				x2 = 562;
+				y2 = 120;
+			}
+			repaint();
+		}
+	});
+	
+	getButton_11().addActionListener(new ActionListener() {
+		
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			// TODO Auto-generated method stub
+			
+			if( x1 == 0){
+				
+				x1 = 594;
+				y1 = 120;
+				
+			}
+			else{
+				
+				x2 = 594;
+				y2 = 120;
+			}
+			repaint();
+		}
+	});
+	
+	getButton_12().addActionListener(new ActionListener() {
+		
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			// TODO Auto-generated method stub
+			
+			if( x1 == 0){
+				
+				x1 = 626;
+				y1 = 120;
+				
+			}
+			else{
+				
+				x2 = 626;
+				y2 = 120;
+			}
+			repaint();
+		}
+	});
+	
+	getButton_13().addActionListener(new ActionListener() {
+		
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			// TODO Auto-generated method stub
+			
+			if( x1 == 0){
+				
+				x1 = 267;
+				y1 = 148;
+				
+			}
+			else{
+				
+				x2 = 267;
+				y2 = 148;
+			}
+			repaint();
+		}
+	});
+	
+	getButton_14().addActionListener(new ActionListener() {
+		
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			// TODO Auto-generated method stub
+			
+			if( x1 == 0){
+				
+				x1 = 299;
+				y1 = 148;
+				
+			}
+			else{
+				
+				x2 = 299;
+				y2 = 148;
+			}
+			repaint();
+		}
+	});
+
+	getButton_15().addActionListener(new ActionListener() {
+		
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			// TODO Auto-generated method stub
+			
+			if( x1 == 0){
+				
+				x1 = 331;
+				y1 = 148;
+				
+			}
+			else{
+				
+				x2 = 331;
+				y2 = 148;
+			}
+			repaint();
+		}
+	});
+	
+	getButton_16().addActionListener(new ActionListener() {
+		
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			// TODO Auto-generated method stub
+			
+			if( x1 == 0){
+				
+				x1 = 363;
+				y1 = 148;
+				
+			}
+			else{
+				
+				x2 = 363;
+				y2 = 148;
+			}
+			repaint();
+		}
+	});
+	
+
+	getButton_17().addActionListener(new ActionListener() {
+		
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			// TODO Auto-generated method stub
+			
+			if( x1 == 0){
+				
+				x1 = 395;
+				y1 = 148;
+				
+			}
+			else{
+				
+				x2 = 395;
+				y2 = 148;
+			}
+			repaint();
+		}
+	});
+	
+	getButton_18().addActionListener(new ActionListener() {
+		
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			// TODO Auto-generated method stub
+			
+			if( x1 == 0){
+				
+				x1 = 427;
+				y1 = 148;
+				
+			}
+			else{
+				
+				x2 = 427;
+				y2 = 148;
+			}
+			repaint();
+		}
+	});
 		switch(i){
 			case 0:
 				g2d.setColor(Color.red);
