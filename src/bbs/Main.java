@@ -16,6 +16,7 @@ import java.awt.event.MouseMotionListener;
 
 import javax.swing.AbstractButton;
 import javax.swing.ButtonGroup;
+import javax.swing.DefaultComboBoxModel;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -27,6 +28,12 @@ import javax.swing.JRadioButton;
 import javax.swing.UIManager;
 import javax.swing.border.EmptyBorder;
 import javax.swing.border.LineBorder;
+import javax.swing.JComboBox;
+import javax.swing.JTextField;
+import javax.swing.border.CompoundBorder;
+import org.eclipse.wb.swing.FocusTraversalOnArray;
+import java.awt.Component;
+import javax.swing.JTextPane;
 
 public class Main extends JFrame implements MouseListener,MouseMotionListener {
 	//--------------------------------------------------------------------------------------------
@@ -113,6 +120,7 @@ public class Main extends JFrame implements MouseListener,MouseMotionListener {
 	
 	
 	private final Color colorValues[] = {Color.RED, Color.BLACK, Color.WHITE};
+	private JTextField textField;
 	
 	public static void main(String[] args) {
 		
@@ -188,26 +196,50 @@ public class Main extends JFrame implements MouseListener,MouseMotionListener {
 
 		JPanel panel = new JPanel();
 		panel.setBorder(UIManager.getBorder("CheckBox.border"));
-		panel.setBounds(12, 10, 137, 326);
+		panel.setBounds(12, 10, 137, 187);
 		contentPane.add(panel);
 		panel.setLayout(null);
-
-		JRadioButton rdbtnOr = new JRadioButton("7432 OR");
-		rdbtnOr.setBounds(8, 66, 125, 30);
-		panel.add(rdbtnOr);
-
-		JRadioButton rdbtnNot = new JRadioButton("7404 NOT");
-		rdbtnNot.setBounds(8, 6, 125, 30);
-		panel.add(rdbtnNot);
-
-		JRadioButton rdbtnAnd = new JRadioButton("7408 AND");
-		rdbtnAnd.setBounds(8, 36, 125, 30);
-		panel.add(rdbtnAnd);
-
+		
+		JComboBox comboBox = new JComboBox();
+		comboBox.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				textField.setText((String) comboBox.getSelectedItem());
+			}
+		});
+		comboBox.setBounds(12, 35, 113, 21);
+		panel.add(comboBox);
+		String []jcs = new String[]{"select","line-black", "line-red", "line-white", "7400","led"};
+		DefaultComboBoxModel comboModel;
+		comboModel = new DefaultComboBoxModel(jcs);
+		comboBox.setModel(comboModel);
+		
+		JLabel lblSelect = new JLabel("Select");
+		lblSelect.setBounds(12, 10, 57, 15);
+		panel.add(lblSelect);
+		
+		JPanel panel_4 = new JPanel();
+		panel_4.setBorder(UIManager.getBorder("CheckBox.border"));
+		panel_4.setBounds(12, 225, 137, 206);
+		contentPane.add(panel_4);
+		panel_4.setLayout(null);
+		
+		textField = new JTextField();
+		textField.setBounds(12, 10, 116, 21);
+		panel_4.add(textField);
+		textField.setColumns(10);
+		
+		JTextPane textPane_1 = new JTextPane();
+		textPane_1.setBounds(12, 88, 113, 108);
+		panel_4.add(textPane_1);
+		
+		JLabel lblNewLabel = new JLabel("Value");
+		lblNewLabel.setBounds(12, 61, 116, 15);
+		panel_4.add(lblNewLabel);
+		
 		JPanel panel_1 = new JPanel();
 		panel_1.setBorder(new LineBorder(new Color(0, 0, 0)));
 		panel_1.setForeground(Color.RED);
-		panel_1.setBounds(161, 10, 711, 406);
+		panel_1.setBounds(161, 10, 711, 421);
 		contentPane.add(panel_1);
 		panel_1.setLayout(null);
 
@@ -216,7 +248,7 @@ public class Main extends JFrame implements MouseListener,MouseMotionListener {
 		
 		JPanel panel_2 = new JPanel();
 		panel_2.setBackground(new Color(255, 228, 196));
-		panel_2.setBounds(141, 42, 446, 307);
+		panel_2.setBounds(12, 42, 687, 369);
 		panel_2.setLayout(null);
 
 		panel_1.add(panel_2);
@@ -229,6 +261,19 @@ public class Main extends JFrame implements MouseListener,MouseMotionListener {
 		btnHole.setBounds(19, 19, 21, 16);
 		panel_2.add(btnHole);
 		
+		JPanel panel_3 = new JPanel();
+		panel_3.setBorder(new LineBorder(new Color(0, 0, 0)));
+		panel_3.setBounds(12, 464, 860, 67);
+		contentPane.add(panel_3);
+		panel_3.setLayout(null);
+		
+		JTextPane textPane = new JTextPane();
+		textPane.setBounds(12, 6, 400, 51);
+		panel_3.add(textPane);
+		
+		JTextPane textPane_2 = new JTextPane();
+		textPane_2.setBounds(448, 6, 400, 51);
+		panel_3.add(textPane_2);
 		
 		
 		
@@ -277,11 +322,11 @@ public class Main extends JFrame implements MouseListener,MouseMotionListener {
 		panel_2.add(button_10);
 		
 		JButton button_11 = new JButton("hole");
-		button_11.setBounds(19, 47, 21, 16);
+		button_11.setBounds(415, 19, 21, 16);
 		panel_2.add(button_11);
 		
 		JButton button_12 = new JButton("hole");
-		button_12.setBounds(52, 47, 21, 16);
+		button_12.setBounds(448, 19, 21, 16);
 		panel_2.add(button_12);
 		
 		JButton button_13 = new JButton("hole");
@@ -371,10 +416,6 @@ public class Main extends JFrame implements MouseListener,MouseMotionListener {
 		JButton button_34 = new JButton("hole");
 		button_34.setBounds(382, 85, 21, 16);
 		panel_2.add(button_34);
-		
-		JButton button_35 = new JButton("hole");
-		button_35.setBounds(415, 19, 21, 16);
-		panel_2.add(button_35);
 		
 		JButton button_36 = new JButton("hole");
 		button_36.setBounds(415, 47, 21, 16);
@@ -697,108 +738,582 @@ public class Main extends JFrame implements MouseListener,MouseMotionListener {
 		panel_2.add(button_115);
 		
 		JButton button_116 = new JButton("hole");
-		button_116.setBounds(19, 255, 21, 16);
+		button_116.setBounds(19, 243, 21, 16);
 		panel_2.add(button_116);
 		
 		JButton button_117 = new JButton("hole");
-		button_117.setBounds(52, 255, 21, 16);
+		button_117.setBounds(52, 243, 21, 16);
 		panel_2.add(button_117);
 		
 		JButton button_118 = new JButton("hole");
-		button_118.setBounds(85, 255, 21, 16);
+		button_118.setBounds(85, 243, 21, 16);
 		panel_2.add(button_118);
 		
 		JButton button_119 = new JButton("hole");
-		button_119.setBounds(118, 255, 21, 16);
+		button_119.setBounds(118, 243, 21, 16);
 		panel_2.add(button_119);
 		
 		JButton button_120 = new JButton("hole");
-		button_120.setBounds(151, 255, 21, 16);
+		button_120.setBounds(151, 243, 21, 16);
 		panel_2.add(button_120);
 		
 		JButton button_121 = new JButton("hole");
-		button_121.setBounds(184, 255, 21, 16);
+		button_121.setBounds(184, 243, 21, 16);
 		panel_2.add(button_121);
 		
 		JButton button_122 = new JButton("hole");
-		button_122.setBounds(217, 255, 21, 16);
+		button_122.setBounds(217, 243, 21, 16);
 		panel_2.add(button_122);
 		
 		JButton button_123 = new JButton("hole");
-		button_123.setBounds(250, 255, 21, 16);
+		button_123.setBounds(250, 243, 21, 16);
 		panel_2.add(button_123);
 		
 		JButton button_124 = new JButton("hole");
-		button_124.setBounds(283, 255, 21, 16);
+		button_124.setBounds(283, 243, 21, 16);
 		panel_2.add(button_124);
 		
 		JButton button_125 = new JButton("hole");
-		button_125.setBounds(316, 255, 21, 16);
+		button_125.setBounds(316, 243, 21, 16);
 		panel_2.add(button_125);
 		
 		JButton button_126 = new JButton("hole");
-		button_126.setBounds(349, 255, 21, 16);
+		button_126.setBounds(349, 243, 21, 16);
 		panel_2.add(button_126);
 		
 		JButton button_127 = new JButton("hole");
-		button_127.setBounds(382, 255, 21, 16);
+		button_127.setBounds(382, 243, 21, 16);
 		panel_2.add(button_127);
 		
 		JButton button_128 = new JButton("hole");
-		button_128.setBounds(415, 255, 21, 16);
+		button_128.setBounds(415, 243, 21, 16);
 		panel_2.add(button_128);
 		
 		JButton button_129 = new JButton("hole");
-		button_129.setBounds(19, 283, 21, 16);
+		button_129.setBounds(19, 271, 21, 16);
 		panel_2.add(button_129);
 		
 		JButton button_130 = new JButton("hole");
-		button_130.setBounds(52, 283, 21, 16);
+		button_130.setBounds(52, 271, 21, 16);
 		panel_2.add(button_130);
 		
 		JButton button_131 = new JButton("hole");
-		button_131.setBounds(85, 283, 21, 16);
+		button_131.setBounds(85, 271, 21, 16);
 		panel_2.add(button_131);
 		
 		JButton button_132 = new JButton("hole");
-		button_132.setBounds(118, 283, 21, 16);
+		button_132.setBounds(118, 271, 21, 16);
 		panel_2.add(button_132);
 		
 		JButton button_133 = new JButton("hole");
-		button_133.setBounds(151, 283, 21, 16);
+		button_133.setBounds(151, 271, 21, 16);
 		panel_2.add(button_133);
 		
 		JButton button_134 = new JButton("hole");
-		button_134.setBounds(184, 283, 21, 16);
+		button_134.setBounds(184, 271, 21, 16);
 		panel_2.add(button_134);
 		
 		JButton button_135 = new JButton("hole");
-		button_135.setBounds(217, 283, 21, 16);
+		button_135.setBounds(217, 271, 21, 16);
 		panel_2.add(button_135);
 		
 		JButton button_136 = new JButton("hole");
-		button_136.setBounds(250, 283, 21, 16);
+		button_136.setBounds(250, 271, 21, 16);
 		panel_2.add(button_136);
 		
 		JButton button_137 = new JButton("hole");
-		button_137.setBounds(283, 283, 21, 16);
+		button_137.setBounds(283, 271, 21, 16);
 		panel_2.add(button_137);
 		
 		JButton button_138 = new JButton("hole");
-		button_138.setBounds(316, 283, 21, 16);
+		button_138.setBounds(316, 271, 21, 16);
 		panel_2.add(button_138);
 		
 		JButton button_139 = new JButton("hole");
-		button_139.setBounds(349, 283, 21, 16);
+		button_139.setBounds(349, 271, 21, 16);
 		panel_2.add(button_139);
 		
 		JButton button_140 = new JButton("hole");
-		button_140.setBounds(382, 283, 21, 16);
+		button_140.setBounds(382, 271, 21, 16);
 		panel_2.add(button_140);
 		
 		JButton button_141 = new JButton("hole");
-		button_141.setBounds(415, 283, 21, 16);
+		button_141.setBounds(415, 271, 21, 16);
 		panel_2.add(button_141);
+		
+		JButton button_142 = new JButton("hole");
+		button_142.setBounds(547, 19, 21, 16);
+		panel_2.add(button_142);
+		
+		JButton button_143 = new JButton("hole");
+		button_143.setBounds(547, 271, 21, 16);
+		panel_2.add(button_143);
+		
+		JButton button_144 = new JButton("hole");
+		button_144.setBounds(547, 243, 21, 16);
+		panel_2.add(button_144);
+		
+		JButton button_145 = new JButton("hole");
+		button_145.setBounds(547, 217, 21, 16);
+		panel_2.add(button_145);
+		
+		JButton button_146 = new JButton("hole");
+		button_146.setBounds(547, 194, 21, 16);
+		panel_2.add(button_146);
+		
+		JButton button_147 = new JButton("hole");
+		button_147.setBounds(547, 172, 21, 16);
+		panel_2.add(button_147);
+		
+		JButton button_148 = new JButton("hole");
+		button_148.setBounds(547, 150, 21, 16);
+		panel_2.add(button_148);
+		
+		JButton button_149 = new JButton("hole");
+		button_149.setBounds(547, 129, 21, 16);
+		panel_2.add(button_149);
+		
+		JButton button_150 = new JButton("hole");
+		button_150.setBounds(547, 108, 21, 16);
+		panel_2.add(button_150);
+		
+		JButton button_151 = new JButton("hole");
+		button_151.setBounds(547, 85, 21, 16);
+		panel_2.add(button_151);
+		
+		JButton button_152 = new JButton("hole");
+		button_152.setBounds(547, 47, 21, 16);
+		panel_2.add(button_152);
+		
+		JButton button_153 = new JButton("hole");
+		button_153.setBounds(514, 19, 21, 16);
+		panel_2.add(button_153);
+		
+		JButton button_154 = new JButton("hole");
+		button_154.setBounds(481, 19, 21, 16);
+		panel_2.add(button_154);
+		
+		JButton button_155 = new JButton("hole");
+		button_155.setBounds(52, 47, 21, 16);
+		panel_2.add(button_155);
+		
+		JButton button_156 = new JButton("hole");
+		button_156.setBounds(448, 47, 21, 16);
+		panel_2.add(button_156);
+		
+		JButton button_157 = new JButton("hole");
+		button_157.setBounds(481, 47, 21, 16);
+		panel_2.add(button_157);
+		
+		JButton button_158 = new JButton("hole");
+		button_158.setBounds(514, 47, 21, 16);
+		panel_2.add(button_158);
+		
+		JButton button_159 = new JButton("hole");
+		button_159.setBounds(514, 85, 21, 16);
+		panel_2.add(button_159);
+		
+		JButton button_160 = new JButton("hole");
+		button_160.setBounds(481, 85, 21, 16);
+		panel_2.add(button_160);
+		
+		JButton button_161 = new JButton("hole");
+		button_161.setBounds(448, 85, 21, 16);
+		panel_2.add(button_161);
+		
+		JButton button_162 = new JButton("hole");
+		button_162.setBounds(448, 108, 21, 16);
+		panel_2.add(button_162);
+		
+		JButton button_163 = new JButton("hole");
+		button_163.setBounds(481, 108, 21, 16);
+		panel_2.add(button_163);
+		
+		JButton button_164 = new JButton("hole");
+		button_164.setBounds(514, 108, 21, 16);
+		panel_2.add(button_164);
+		
+		JButton button_165 = new JButton("hole");
+		button_165.setBounds(514, 129, 21, 16);
+		panel_2.add(button_165);
+		
+		JButton button_166 = new JButton("hole");
+		button_166.setBounds(481, 129, 21, 16);
+		panel_2.add(button_166);
+		
+		JButton button_167 = new JButton("hole");
+		button_167.setBounds(448, 129, 21, 16);
+		panel_2.add(button_167);
+		
+		JButton button_168 = new JButton("hole");
+		button_168.setBounds(448, 150, 21, 16);
+		panel_2.add(button_168);
+		
+		JButton button_169 = new JButton("hole");
+		button_169.setBounds(481, 150, 21, 16);
+		panel_2.add(button_169);
+		
+		JButton button_170 = new JButton("hole");
+		button_170.setBounds(514, 150, 21, 16);
+		panel_2.add(button_170);
+		
+		JButton button_171 = new JButton("hole");
+		button_171.setBounds(514, 172, 21, 16);
+		panel_2.add(button_171);
+		
+		JButton button_172 = new JButton("hole");
+		button_172.setBounds(481, 172, 21, 16);
+		panel_2.add(button_172);
+		
+		JButton button_173 = new JButton("hole");
+		button_173.setBounds(448, 172, 21, 16);
+		panel_2.add(button_173);
+		
+		JButton button_174 = new JButton("hole");
+		button_174.setBounds(448, 194, 21, 16);
+		panel_2.add(button_174);
+		
+		JButton button_175 = new JButton("hole");
+		button_175.setBounds(448, 217, 21, 16);
+		panel_2.add(button_175);
+		
+		JButton button_176 = new JButton("hole");
+		button_176.setBounds(448, 243, 21, 16);
+		panel_2.add(button_176);
+		
+		JButton button_177 = new JButton("hole");
+		button_177.setBounds(448, 271, 21, 16);
+		panel_2.add(button_177);
+		
+		JButton button_178 = new JButton("hole");
+		button_178.setBounds(481, 271, 21, 16);
+		panel_2.add(button_178);
+		
+		JButton button_179 = new JButton("hole");
+		button_179.setBounds(481, 243, 21, 16);
+		panel_2.add(button_179);
+		
+		JButton button_180 = new JButton("hole");
+		button_180.setBounds(481, 217, 21, 16);
+		panel_2.add(button_180);
+		
+		JButton button_181 = new JButton("hole");
+		button_181.setBounds(481, 194, 21, 16);
+		panel_2.add(button_181);
+		
+		JButton button_182 = new JButton("hole");
+		button_182.setBounds(514, 194, 21, 16);
+		panel_2.add(button_182);
+		
+		JButton button_183 = new JButton("hole");
+		button_183.setBounds(514, 217, 21, 16);
+		panel_2.add(button_183);
+		
+		JButton button_184 = new JButton("hole");
+		button_184.setBounds(514, 243, 21, 16);
+		panel_2.add(button_184);
+		
+		JButton button_185 = new JButton("hole");
+		button_185.setBounds(514, 271, 21, 16);
+		panel_2.add(button_185);
+		
+		JButton button_186 = new JButton("hole");
+		button_186.setBounds(646, 271, 21, 16);
+		panel_2.add(button_186);
+		
+		JButton button_187 = new JButton("hole");
+		button_187.setBounds(646, 243, 21, 16);
+		panel_2.add(button_187);
+		
+		JButton button_188 = new JButton("hole");
+		button_188.setBounds(646, 217, 21, 16);
+		panel_2.add(button_188);
+		
+		JButton button_189 = new JButton("hole");
+		button_189.setBounds(646, 194, 21, 16);
+		panel_2.add(button_189);
+		
+		JButton button_190 = new JButton("hole");
+		button_190.setBounds(646, 172, 21, 16);
+		panel_2.add(button_190);
+		
+		JButton button_191 = new JButton("hole");
+		button_191.setBounds(646, 150, 21, 16);
+		panel_2.add(button_191);
+		
+		JButton button_192 = new JButton("hole");
+		button_192.setBounds(646, 129, 21, 16);
+		panel_2.add(button_192);
+		
+		JButton button_193 = new JButton("hole");
+		button_193.setBounds(646, 108, 21, 16);
+		panel_2.add(button_193);
+		
+		JButton button_194 = new JButton("hole");
+		button_194.setBounds(646, 85, 21, 16);
+		panel_2.add(button_194);
+		
+		JButton button_195 = new JButton("hole");
+		button_195.setBounds(646, 47, 21, 16);
+		panel_2.add(button_195);
+		
+		JButton button_196 = new JButton("hole");
+		button_196.setBounds(646, 19, 21, 16);
+		panel_2.add(button_196);
+		
+		JButton button_197 = new JButton("hole");
+		button_197.setBounds(613, 19, 21, 16);
+		panel_2.add(button_197);
+		
+		JButton button_198 = new JButton("hole");
+		button_198.setBounds(613, 47, 21, 16);
+		panel_2.add(button_198);
+		
+		JButton button_199 = new JButton("hole");
+		button_199.setBounds(580, 19, 21, 16);
+		panel_2.add(button_199);
+		
+		JButton button_200 = new JButton("hole");
+		button_200.setBounds(580, 47, 21, 16);
+		panel_2.add(button_200);
+		
+		JButton button_201 = new JButton("hole");
+		button_201.setBounds(580, 85, 21, 16);
+		panel_2.add(button_201);
+		
+		JButton button_202 = new JButton("hole");
+		button_202.setBounds(580, 108, 21, 16);
+		panel_2.add(button_202);
+		
+		JButton button_203 = new JButton("hole");
+		button_203.setBounds(580, 129, 21, 16);
+		panel_2.add(button_203);
+		
+		JButton button_204 = new JButton("hole");
+		button_204.setBounds(580, 150, 21, 16);
+		panel_2.add(button_204);
+		
+		JButton button_205 = new JButton("hole");
+		button_205.setBounds(580, 172, 21, 16);
+		panel_2.add(button_205);
+		
+		JButton button_206 = new JButton("hole");
+		button_206.setBounds(613, 85, 21, 16);
+		panel_2.add(button_206);
+		
+		JButton button_207 = new JButton("hole");
+		button_207.setBounds(613, 108, 21, 16);
+		panel_2.add(button_207);
+		
+		JButton button_208 = new JButton("hole");
+		button_208.setBounds(613, 129, 21, 16);
+		panel_2.add(button_208);
+		
+		JButton button_209 = new JButton("hole");
+		button_209.setBounds(613, 150, 21, 16);
+		panel_2.add(button_209);
+		
+		JButton button_210 = new JButton("hole");
+		button_210.setBounds(613, 172, 21, 16);
+		panel_2.add(button_210);
+		
+		JButton button_211 = new JButton("hole");
+		button_211.setBounds(613, 194, 21, 16);
+		panel_2.add(button_211);
+		
+		JButton button_212 = new JButton("hole");
+		button_212.setBounds(580, 194, 21, 16);
+		panel_2.add(button_212);
+		
+		JButton button_213 = new JButton("hole");
+		button_213.setBounds(580, 217, 21, 16);
+		panel_2.add(button_213);
+		
+		JButton button_214 = new JButton("hole");
+		button_214.setBounds(613, 217, 21, 16);
+		panel_2.add(button_214);
+		
+		JButton button_215 = new JButton("hole");
+		button_215.setBounds(613, 243, 21, 16);
+		panel_2.add(button_215);
+		
+		JButton button_216 = new JButton("hole");
+		button_216.setBounds(580, 243, 21, 16);
+		panel_2.add(button_216);
+		
+		JButton button_217 = new JButton("hole");
+		button_217.setBounds(580, 271, 21, 16);
+		panel_2.add(button_217);
+		
+		JButton button_218 = new JButton("hole");
+		button_218.setBounds(613, 271, 21, 16);
+		panel_2.add(button_218);
+		
+		JButton button_219 = new JButton("hole");
+		button_219.setBounds(646, 343, 21, 16);
+		panel_2.add(button_219);
+		
+		JButton button_220 = new JButton("hole");
+		button_220.setBounds(646, 315, 21, 16);
+		panel_2.add(button_220);
+		
+		JButton button_221 = new JButton("hole");
+		button_221.setBounds(613, 315, 21, 16);
+		panel_2.add(button_221);
+		
+		JButton button_222 = new JButton("hole");
+		button_222.setBounds(613, 343, 21, 16);
+		panel_2.add(button_222);
+		
+		JButton button_223 = new JButton("hole");
+		button_223.setBounds(580, 343, 21, 16);
+		panel_2.add(button_223);
+		
+		JButton button_224 = new JButton("hole");
+		button_224.setBounds(580, 315, 21, 16);
+		panel_2.add(button_224);
+		
+		JButton button_225 = new JButton("hole");
+		button_225.setBounds(547, 315, 21, 16);
+		panel_2.add(button_225);
+		
+		JButton button_226 = new JButton("hole");
+		button_226.setBounds(547, 343, 21, 16);
+		panel_2.add(button_226);
+		
+		JButton button_227 = new JButton("hole");
+		button_227.setBounds(514, 343, 21, 16);
+		panel_2.add(button_227);
+		
+		JButton button_228 = new JButton("hole");
+		button_228.setBounds(514, 315, 21, 16);
+		panel_2.add(button_228);
+		
+		JButton button_229 = new JButton("hole");
+		button_229.setBounds(481, 315, 21, 16);
+		panel_2.add(button_229);
+		
+		JButton button_230 = new JButton("hole");
+		button_230.setBounds(481, 343, 21, 16);
+		panel_2.add(button_230);
+		
+		JButton button_231 = new JButton("hole");
+		button_231.setBounds(448, 343, 21, 16);
+		panel_2.add(button_231);
+		
+		JButton button_232 = new JButton("hole");
+		button_232.setBounds(448, 315, 21, 16);
+		panel_2.add(button_232);
+		
+		JButton button_233 = new JButton("hole");
+		button_233.setBounds(415, 315, 21, 16);
+		panel_2.add(button_233);
+		
+		JButton button_234 = new JButton("hole");
+		button_234.setBounds(415, 343, 21, 16);
+		panel_2.add(button_234);
+		
+		JButton button_235 = new JButton("hole");
+		button_235.setBounds(382, 343, 21, 16);
+		panel_2.add(button_235);
+		
+		JButton button_236 = new JButton("hole");
+		button_236.setBounds(382, 315, 21, 16);
+		panel_2.add(button_236);
+		
+		JButton button_237 = new JButton("hole");
+		button_237.setBounds(349, 315, 21, 16);
+		panel_2.add(button_237);
+		
+		JButton button_238 = new JButton("hole");
+		button_238.setBounds(349, 343, 21, 16);
+		panel_2.add(button_238);
+		
+		JButton button_239 = new JButton("hole");
+		button_239.setBounds(316, 343, 21, 16);
+		panel_2.add(button_239);
+		
+		JButton button_240 = new JButton("hole");
+		button_240.setBounds(316, 315, 21, 16);
+		panel_2.add(button_240);
+		
+		JButton button_241 = new JButton("hole");
+		button_241.setBounds(283, 315, 21, 16);
+		panel_2.add(button_241);
+		
+		JButton button_242 = new JButton("hole");
+		button_242.setBounds(283, 343, 21, 16);
+		panel_2.add(button_242);
+		
+		JButton button_243 = new JButton("hole");
+		button_243.setBounds(250, 343, 21, 16);
+		panel_2.add(button_243);
+		
+		JButton button_244 = new JButton("hole");
+		button_244.setBounds(250, 315, 21, 16);
+		panel_2.add(button_244);
+		
+		JButton button_245 = new JButton("hole");
+		button_245.setBounds(217, 315, 21, 16);
+		panel_2.add(button_245);
+		
+		JButton button_246 = new JButton("hole");
+		button_246.setBounds(217, 343, 21, 16);
+		panel_2.add(button_246);
+		
+		JButton button_247 = new JButton("hole");
+		button_247.setBounds(184, 343, 21, 16);
+		panel_2.add(button_247);
+		
+		JButton button_248 = new JButton("hole");
+		button_248.setBounds(184, 315, 21, 16);
+		panel_2.add(button_248);
+		
+		JButton button_249 = new JButton("hole");
+		button_249.setBounds(151, 315, 21, 16);
+		panel_2.add(button_249);
+		
+		JButton button_250 = new JButton("hole");
+		button_250.setBounds(151, 343, 21, 16);
+		panel_2.add(button_250);
+		
+		JButton button_251 = new JButton("hole");
+		button_251.setBounds(118, 343, 21, 16);
+		panel_2.add(button_251);
+		
+		JButton button_252 = new JButton("hole");
+		button_252.setBounds(118, 315, 21, 16);
+		panel_2.add(button_252);
+		
+		JButton button_253 = new JButton("hole");
+		button_253.setBounds(85, 315, 21, 16);
+		panel_2.add(button_253);
+		
+		JButton button_254 = new JButton("hole");
+		button_254.setBounds(85, 343, 21, 16);
+		panel_2.add(button_254);
+		
+		JButton button_255 = new JButton("hole");
+		button_255.setBounds(52, 343, 21, 16);
+		panel_2.add(button_255);
+		
+		JButton button_256 = new JButton("hole");
+		button_256.setBounds(52, 315, 21, 16);
+		panel_2.add(button_256);
+		
+		JButton button_257 = new JButton("hole");
+		button_257.setBounds(19, 315, 21, 16);
+		panel_2.add(button_257);
+		
+		JButton button_258 = new JButton("hole");
+		button_258.setBounds(19, 343, 21, 16);
+		panel_2.add(button_258);
+		
+		JButton button_35 = new JButton("hole");
+		button_35.setBounds(19, 47, 21, 16);
+		panel_2.add(button_35);
+		panel_1.setFocusTraversalPolicy(new FocusTraversalOnArray(new Component[]{btnHole, button, button_1, button_2, button_3, button_4, button_5, button_6, button_7, button_8, button_9, button_10, button_35, button_155, button_154, button_153, button_142, button_199, button_197, button_196, button_11, button_12, button_13, button_14, button_15, button_16, button_17, button_18, button_19, button_20, button_21, button_22, button_36, button_156, button_157, button_158, button_152, button_200, button_198, button_195, button_23, button_24, button_25, button_26, button_27, button_28, button_29, button_30, button_31, button_32, button_33, button_34, button_37, button_161, button_160, button_159, button_151, button_201, button_206, button_194, button_38, button_39, button_40, button_41, button_42, button_43, button_44, button_45, button_46, button_47, button_48, button_49, button_50, button_162, button_163, button_164, button_150, button_202, button_207, button_193, button_51, button_52, button_53, button_54, button_55, button_56, button_57, button_58, button_59, button_60, button_61, button_62, button_63, button_167, button_166, button_165, button_149, button_203, button_208, button_192, button_64, button_65, button_66, button_67, button_68, button_69, button_70, button_71, button_72, button_73, button_74, button_75, button_76, button_168, button_169, button_170, button_148, button_204, button_209, button_191, button_77, button_78, button_79, button_80, button_81, button_82, button_83, button_84, button_85, button_86, button_87, button_88, button_89, button_173, button_172, button_171, button_147, button_205, button_210, button_190, button_90, button_91, button_92, button_93, button_94, button_95, button_96, button_97, button_98, button_99, button_100, button_101, button_102, button_174, button_181, button_182, button_146, button_212, button_211, button_189, button_103, button_104, button_105, button_106, button_107, button_108, button_109, button_110, button_111, button_112, button_113, button_114, button_115, button_175, button_180, button_183, button_145, button_213, button_214, button_188, button_116, button_117, button_118, button_119, button_120, button_121, button_122, button_123, button_124, button_125, button_126, button_127, button_128, button_176, button_179, button_184, button_144, button_216, button_215, button_187, button_129, button_130, button_131, button_132, button_133, button_134, button_135, button_136, button_137, button_138, button_139, button_140, button_141, button_177, button_178, button_185, button_143, button_217, button_218, button_186, button_257, button_256, button_253, button_252, button_249, button_248, button_245, button_244, button_241, button_240, button_237, button_236, button_233, button_232, button_229, button_228, button_225, button_224, button_221, button_220, button_258, button_255, button_254, button_251, button_250, button_247, button_246, button_243, button_242, button_239, button_238, button_235, button_234, button_231, button_230, button_227, button_226, button_223, button_222, button_219, panel_2, rdbtnRed, rdbtnNewRadioButton, rdbtnWhite}));
+		setFocusTraversalPolicy(new FocusTraversalOnArray(new Component[]{menuBar, mnFile, mntmNew, mntmOpen, mntmSave, mnEdit, mntmBack, mnHelp, mntmAbout, contentPane, panel, comboBox, panel_4, textField, panel_1, panel_2, btnHole, button, button_1, button_2, button_3, button_4, button_5, button_6, button_7, button_8, button_9, button_10, button_11, button_12, button_13, button_14, button_15, button_16, button_17, button_18, button_19, button_20, button_21, button_22, button_23, button_24, button_25, button_26, button_27, button_28, button_29, button_30, button_31, button_32, button_33, button_34, button_35, button_36, button_37, button_38, button_39, button_40, button_41, button_42, button_43, button_44, button_45, button_46, button_47, button_48, button_49, button_50, button_51, button_52, button_53, button_54, button_55, button_56, button_57, button_58, button_59, button_60, button_61, button_62, button_63, button_64, button_65, button_66, button_67, button_68, button_69, button_70, button_71, button_72, button_73, button_74, button_75, button_76, button_77, button_78, button_79, button_80, button_81, button_82, button_83, button_84, button_85, button_86, button_87, button_88, button_89, button_90, button_91, button_92, button_93, button_94, button_95, button_96, button_97, button_98, button_99, button_100, button_101, button_102, button_103, button_104, button_105, button_106, button_107, button_108, button_109, button_110, button_111, button_112, button_113, button_114, button_115, button_116, button_117, button_118, button_119, button_120, button_121, button_122, button_123, button_124, button_125, button_126, button_127, button_128, button_129, button_130, button_131, button_132, button_133, button_134, button_135, button_136, button_137, button_138, button_139, button_140, button_141, button_142, button_143, button_144, button_145, button_146, button_147, button_148, button_149, button_150, button_151, button_152, button_153, button_154, button_155, button_156, button_157, button_158, button_159, button_160, button_161, button_162, button_163, button_164, button_165, button_166, button_167, button_168, button_169, button_170, button_171, button_172, button_173, button_174, button_175, button_176, button_177, button_178, button_179, button_180, button_181, button_182, button_183, button_184, button_185, button_186, button_187, button_188, button_189, button_190, button_191, button_192, button_193, button_194, button_195, button_196, button_197, button_198, button_199, button_200, button_201, button_202, button_203, button_204, button_205, button_206, button_207, button_208, button_209, button_210, button_211, button_212, button_213, button_214, button_215, button_216, button_217, button_218, button_219, button_220, button_221, button_222, button_223, button_224, button_225, button_226, button_227, button_228, button_229, button_230, button_231, button_232, button_233, button_234, button_235, button_236, button_237, button_238, button_239, button_240, button_241, button_242, button_243, button_244, button_245, button_246, button_247, button_248, button_249, button_250, button_251, button_252, button_253, button_254, button_255, button_256, button_257, button_258, rdbtnRed, rdbtnNewRadioButton, rdbtnWhite, panel_3}));
 
 	
 		
@@ -824,11 +1339,8 @@ public class Main extends JFrame implements MouseListener,MouseMotionListener {
 		radioGroup.add(rdbtnNewRadioButton);
 		radioGroup.add(rdbtnWhite);
 		
+
 		
-		JPanel panel_3 = new JPanel();
-		panel_3.setBorder(new LineBorder(new Color(0, 0, 0)));
-		panel_3.setBounds(12, 464, 860, 67);
-		contentPane.add(panel_3);
 		
 		
 	}
@@ -990,7 +1502,7 @@ public class Main extends JFrame implements MouseListener,MouseMotionListener {
 	void display(){
 		JFrame f = new JFrame("LinePanel");
 		f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		f.add(this);
+		f.getContentPane().add(this);
 		f.pack();
 		f.setLocationRelativeTo(null);
 		f.setVisible(true);
@@ -1014,70 +1526,6 @@ public class Main extends JFrame implements MouseListener,MouseMotionListener {
 	@Override
 	public void mouseExited(MouseEvent e) {
 		// TODO Auto-generated method stub
-		System.out.println("踰꾪듉 �쐞");
+		//System.out.println();
 	}
-	//--------------------------------------------------------------------------------------------
-/*
-	@Override
-	public void mouseClicked(MouseEvent e) {
-		// TODO Auto-generated method stub
-		int x = e.getX();
-		int y = e.getY();
-		System.out.println("mouseClicked " + x + " - Y: " + y);
-
-	}
-
-	@Override
-	public void mouseEntered(MouseEvent e) {
-		// TODO Auto-generated method stub
-		int x = e.getX();
-		int y = e.getY();
-		System.out.println("mouseEntered " + x + " - Y: " + y);
-
-	}
-
-	@Override
-	public void mouseExited(MouseEvent e) {
-		// TODO Auto-generated method stub
-		int x = e.getX();
-		int y = e.getY();
-		System.out.println("mouseExited " + x + " - Y: " + y);
-
-	}
-
-	@Override
-	public void mousePressed(MouseEvent e) {
-		// TODO Auto-generated method stub
-		int x = e.getX();
-		int y = e.getY();
-		System.out.println("mousePressed X: " + x + " - Y: " + y);
-
-	}
-
-	@Override
-	public void mouseReleased(MouseEvent e) {
-		// TODO Auto-generated method stub
-		int x = e.getX();
-		int y = e.getY();
-		System.out.println("mouseReleased X: " + x + " - Y: " + y);
-
-	}
-
-	@Override
-	public void mouseDragged(MouseEvent e) {
-		// TODO Auto-generated method stub
-		int x = e.getX();
-		int y = e.getY();
-		System.out.println("mouseDragged X: " + x + " - Y: " + y);
-		
-	}
-
-	@Override
-	public void mouseMoved(MouseEvent e) {
-		// TODO Auto-generated method stub
-		int x = e.getX();
-		int y = e.getY();
-		System.out.println("mouseMoved X: " + x + " - Y: " + y);
-	}
-*/
 }
