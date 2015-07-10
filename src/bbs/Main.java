@@ -41,6 +41,9 @@ public class Main extends JFrame implements MouseListener,MouseMotionListener {
 	private Point p2 = new Point(0, 0);
 	private boolean drawing;
 	int i = 0;
+	int Clickpoint = 0;
+	int x[] = {0,0,0,0,0,0,0,0,0,0};
+	int y[] = {0,0,0,0,0,0,0,0,0,0};
 	int x1 = 0, x2 = 0, y1 = 0, y2 = 0; 
 	//--------------------------------------------------------------------------------------------
 	private JPanel contentPane;
@@ -1654,16 +1657,18 @@ public class Main extends JFrame implements MouseListener,MouseMotionListener {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				// TODO Auto-generated method stub
-				if( x1 == 0){
-			
-					x1 = 233;
-					y1 = 120;
-					
+				if(Clickpoint == 0)
+				{
+					x[Clickpoint] = 233;
+					y[Clickpoint] = 120;
+					Clickpoint++;
+				}
+				if(x[Clickpoint] == 233 && y[Clickpoint] == 120){
 				}
 				else{
-					
-					x2 = 233;
-					y2 = 120;
+					x[Clickpoint+1] = 233;
+					y[Clickpoint+1] = 120;
+					Clickpoint++;
 				}
 				repaint();
 			}
@@ -1674,19 +1679,20 @@ public class Main extends JFrame implements MouseListener,MouseMotionListener {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				// TODO Auto-generated method stub
-				
-				if( x1 == 0){
-					
-					x1 = 269;
-					y1 = 120;
-					
+				if(Clickpoint == 0)
+				{
+					x[Clickpoint] = 269;
+					y[Clickpoint] = 120;
+					Clickpoint++;
+				}
+				if(x[Clickpoint] == 269 && y[Clickpoint] == 120)
+				{
 				}
 				else{
-					
-					x2 = 269;
-					y2 = 120;
+					x[Clickpoint+1] = 269;
+					y[Clickpoint+1] = 120;
+					Clickpoint++;
 				}
-					
 				repaint();
 			}
 		});
@@ -1697,17 +1703,18 @@ public class Main extends JFrame implements MouseListener,MouseMotionListener {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				// TODO Auto-generated method stub
-				
-				if( x1 == 0){
-					
-					x1 = 301;
-					y1 = 120;
-					
+				if(Clickpoint == 0)
+				{
+					x[Clickpoint] = 301;
+					y[Clickpoint] = 120;
+					Clickpoint++;
+				}
+				if(x[Clickpoint] == 301 && y[Clickpoint] == 120){
 				}
 				else{
-					
-					x2 = 301;
-					y2 = 120;
+					x[Clickpoint+1] = 301;
+					y[Clickpoint+1] = 120;
+					Clickpoint++;
 				}
 				repaint();
 			}
@@ -1718,17 +1725,19 @@ public class Main extends JFrame implements MouseListener,MouseMotionListener {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				// TODO Auto-generated method stub
-				
-				if( x1 == 0){
-					
-					x1 = 333;
-					y1 = 120;
-					
+				if(Clickpoint == 0)
+				{
+					x[Clickpoint] = 333;
+					y[Clickpoint] = 120;
+					Clickpoint++;
+				}
+				if(x[Clickpoint] == 333 && y[Clickpoint] == 120)
+				{
 				}
 				else{
-					
-					x2 = 333;
-					y2 = 120;
+					x[Clickpoint+1] = 333;
+					y[Clickpoint+1] = 120;
+					Clickpoint++;
 				}
 				repaint();
 			}
@@ -1739,17 +1748,19 @@ public class Main extends JFrame implements MouseListener,MouseMotionListener {
 		@Override
 		public void actionPerformed(ActionEvent e) {
 			// TODO Auto-generated method stub
-			
-			if( x1 == 0){
-				
-				x1 = 365;
-				y1 = 120;
-				
+			if(Clickpoint == 0)
+			{
+				x[Clickpoint] = 365;
+				y[Clickpoint] = 120;
+				Clickpoint++;
+			}
+			if(x[Clickpoint] == 365 && y[Clickpoint] == 120)
+			{
 			}
 			else{
-				
-				x2 = 365;
-				y2 = 120;
+				x[Clickpoint+1] = 365;
+				y[Clickpoint+1] = 120;
+				Clickpoint++;
 			}
 			repaint();
 		}
@@ -1760,17 +1771,19 @@ public class Main extends JFrame implements MouseListener,MouseMotionListener {
 		@Override
 		public void actionPerformed(ActionEvent e) {
 			// TODO Auto-generated method stub
-			
-			if( x1 == 0){
-				
-				x1 = 397;
-				y1 = 120;
-				
+			if(Clickpoint == 0)
+			{
+				x[Clickpoint] = 397;
+				y[Clickpoint] = 120;
+				Clickpoint++;
+			}
+			if(x[Clickpoint] == 397 && y[Clickpoint] == 120)
+			{
 			}
 			else{
-				
-				x2 = 397;
-				y2 = 120;
+				x[Clickpoint+1] = 397;
+				y[Clickpoint+1] = 120;
+				Clickpoint++;
 			}
 			repaint();
 		}
@@ -1780,17 +1793,19 @@ public class Main extends JFrame implements MouseListener,MouseMotionListener {
 		@Override
 		public void actionPerformed(ActionEvent e) {
 			// TODO Auto-generated method stub
-			
-			if( x1 == 0){
-				
-				x1 = 429;
-				y1 = 120;
-				
+			if(Clickpoint == 0)
+			{
+				x[Clickpoint] = 429;
+				y[Clickpoint] = 120;
+				Clickpoint++;
+			}
+			if(x[Clickpoint] == 429 && y[Clickpoint] == 120)
+			{
 			}
 			else{
-				
-				x2 = 429;
-				y2 = 120;
+				x[Clickpoint+1] = 429;
+				y[Clickpoint+1] = 120;
+				Clickpoint++;
 			}
 			repaint();
 		}
@@ -1800,17 +1815,19 @@ public class Main extends JFrame implements MouseListener,MouseMotionListener {
 		@Override
 		public void actionPerformed(ActionEvent e) {
 			// TODO Auto-generated method stub
-			
-			if( x1 == 0){
-				
-				x1 = 461;
-				y1 = 120;
-				
+			if(Clickpoint == 0)
+			{
+				x[Clickpoint] = 461;
+				y[Clickpoint] = 120;
+				Clickpoint++;
+			}
+			if(x[Clickpoint] == 461 && y[Clickpoint] == 120)
+			{
 			}
 			else{
-				
-				x2 = 461;
-				y2 = 120;
+				x[Clickpoint+1] = 461;
+				y[Clickpoint+1] = 120;
+				Clickpoint++;
 			}
 			repaint();
 		}
@@ -1822,17 +1839,19 @@ public class Main extends JFrame implements MouseListener,MouseMotionListener {
 		@Override
 		public void actionPerformed(ActionEvent e) {
 			// TODO Auto-generated method stub
-			
-			if( x1 == 0){
-				
-				x1 = 495;
-				y1 = 120;
-				
+			if(Clickpoint == 0)
+			{
+				x[Clickpoint] = 495;
+				y[Clickpoint] = 120;
+				Clickpoint++;
+			}
+			else if((x[Clickpoint] == 495 && y[Clickpoint] == 120))
+			{
 			}
 			else{
-				
-				x2 = 495;
-				y2 = 120;
+				x[Clickpoint+1] = 495;
+				y[Clickpoint+1] = 120;
+				Clickpoint++;
 			}
 			repaint();
 		}
@@ -1844,17 +1863,19 @@ public class Main extends JFrame implements MouseListener,MouseMotionListener {
 		@Override
 		public void actionPerformed(ActionEvent e) {
 			// TODO Auto-generated method stub
-			
-			if( x1 == 0){
-				
-				x1 = 527;
-				y1 = 120;
-				
+			if(Clickpoint == 0)
+			{
+				x[Clickpoint] = 527;
+				y[Clickpoint] = 120;
+				Clickpoint++;
+			}
+			if(x[Clickpoint] == 527 && y[Clickpoint] == 120)
+			{
 			}
 			else{
-				
-				x2 = 527;
-				y2 = 120;
+				x[Clickpoint+1] = 527;
+				y[Clickpoint+1] = 120;
+				Clickpoint++;
 			}
 			repaint();
 		}
@@ -1865,17 +1886,19 @@ public class Main extends JFrame implements MouseListener,MouseMotionListener {
 		@Override
 		public void actionPerformed(ActionEvent e) {
 			// TODO Auto-generated method stub
-			
-			if( x1 == 0){
-				
-				x1 = 562;
-				y1 = 120;
-				
+			if(Clickpoint == 0)
+			{
+				x[Clickpoint] = 562;
+				y[Clickpoint] = 120;
+				Clickpoint++;
+			}
+			if(x[Clickpoint] == 562 && y[Clickpoint] == 120)
+			{
 			}
 			else{
-				
-				x2 = 562;
-				y2 = 120;
+				x[Clickpoint+1] = 562;
+				y[Clickpoint+1] = 120;
+				Clickpoint++;
 			}
 			repaint();
 		}
@@ -1886,17 +1909,19 @@ public class Main extends JFrame implements MouseListener,MouseMotionListener {
 		@Override
 		public void actionPerformed(ActionEvent e) {
 			// TODO Auto-generated method stub
-			
-			if( x1 == 0){
-				
-				x1 = 594;
-				y1 = 120;
-				
+			if(Clickpoint == 0)
+			{
+				x[Clickpoint] = 594;
+				y[Clickpoint] = 120;
+				Clickpoint++;
+			}
+			if(x[Clickpoint] == 594 && y[Clickpoint] == 120)
+			{
 			}
 			else{
-				
-				x2 = 594;
-				y2 = 120;
+				x[Clickpoint+1] = 594;
+				y[Clickpoint+1] = 120;
+				Clickpoint++;
 			}
 			repaint();
 		}
@@ -1907,17 +1932,19 @@ public class Main extends JFrame implements MouseListener,MouseMotionListener {
 		@Override
 		public void actionPerformed(ActionEvent e) {
 			// TODO Auto-generated method stub
-			
-			if( x1 == 0){
-				
-				x1 = 626;
-				y1 = 120;
-				
+			if(Clickpoint == 0)
+			{
+				x[Clickpoint] = 626;
+				y[Clickpoint] = 120;
+				Clickpoint++;
+			}
+			if(x[Clickpoint] == 626 && y[Clickpoint] == 120)
+			{
 			}
 			else{
-				
-				x2 = 626;
-				y2 = 120;
+				x[Clickpoint+1] = 626;
+				y[Clickpoint+1] = 120;
+				Clickpoint++;
 			}
 			repaint();
 		}
@@ -2063,8 +2090,14 @@ public class Main extends JFrame implements MouseListener,MouseMotionListener {
 		g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
 		g2d.setStroke(new BasicStroke(9, BasicStroke.CAP_ROUND, BasicStroke.JOIN_BEVEL));
 		
-		g.drawLine(x1, y1, x2, y2);
-		
+		//g.drawLine(x1, y1, x2, y2);
+		for(i = 0; i < 100; i++)
+		{
+			if(Clickpoint > 2 && i % 2 == 0)
+			{
+				g.drawLine(x[i], y[i], x[i+1], y[i+1]);
+			}
+		}
 		//--------------------------------------------------------------------------------------------
 	}
 	
