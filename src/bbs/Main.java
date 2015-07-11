@@ -161,7 +161,7 @@ public class Main extends JFrame implements MouseListener,MouseMotionListener {
 	public JButton getButton_7(){
 		return button_7;
 	}
-	public void setButton_8(JButton button_3){
+	public void setButton_8(JButton button_8){
 		
 		this.button_8 = button_8;
 	}
@@ -337,60 +337,137 @@ public class Main extends JFrame implements MouseListener,MouseMotionListener {
 	
 	public JButton getButton_29(){
 		return button_29;
-	}
-	public void setButton_30(JButton button_30){
-		
+		}
+		public void setButton_30(JButton button_30){
 		this.button_30 = button_30;
-	}
-	
-	public JButton getButton_30(){
+		}
+		public JButton getButton_30(){
 		return button_30;
-	}
-	public void setButton_31(JButton button_31){
-		
+		}
+		public void setButton_31(JButton button_31){
 		this.button_31 = button_31;
-	}
-	
-	public JButton getButton_31(){
+		}
+		public JButton getButton_31(){
 		return button_31;
-	}
-	public void setButton_32(JButton button_32){
-		
+		}
+		public void setButton_32(JButton button_32){
 		this.button_32 = button_32;
-	}
-	
-	public JButton getButton_33(){
+		}
+		public JButton getButton_32(){
 		return button_33;
-	}
-	public void setButton_34(JButton button_34){
-		
+		}
+		public void setButton_33(JButton button_32){
+		this.button_32 = button_32;
+		}
+		public JButton getButton_33(){
+		return button_33;
+		}
+		public void setButton_34(JButton button_34){
 		this.button_34 = button_34;
-	}
-	
-	public JButton getButton_34(){
+		}
+		public JButton getButton_34(){
 		return button_34;
-	}
-	public void setButton_35(JButton button_35){
-		
+		}
+		public void setButton_35(JButton button_35){
 		this.button_35 = button_35;
-	}
-	
-	public JButton getButton_35(){
+		}
+		public JButton getButton_35(){
 		return button_35;
-	}
-	public void setButton_36(JButton button_36){
-		
+		}
+		public void setButton_36(JButton button_36){
 		this.button_36 = button_36;
-	}
-	
-	public JButton getButton_36(){
+		}
+		public JButton getButton_36(){
 		return button_36;
-	}
+		}
+
+		public void setButton_37(JButton button_37){
+		this.button_37 = button_37;
+		}
+		public JButton getButton_37(){
+		return button_37;
+		}
+		public void setButton_38(JButton button_38){
+		this.button_38 = button_38;
+		}
+		public JButton getButton_38(){
+		return button_38;
+		}
+
+		public void setButton_39(JButton button_39){
+		this.button_39 = button_39;
+		}
+		public JButton getButton_39(){
+		return button_39;
+		}
+		public void setButton_40(JButton button_40){
+		this.button_40 = button_40;
+		}
+		public JButton getButton_40(){
+		return button_40;
+		}
+		public void setButton_41(JButton button_41){
+		this.button_41 = button_41;
+		}
+		public JButton getButton_41(){
+		return button_41;
+		}
+		public void setButton_42(JButton button_42){
+		this.button_42 = button_42;
+		}
+		public JButton getButton_42(){
+		return button_42;
+		}
+		public void setButton_43(JButton button_43){
+		this.button_43 = button_43;
+		}
+		public JButton getButton_43(){
+		return button_43;
+		}
+		public void setButton_44(JButton button_44){
+		this.button_44 = button_44;
+		}
+		public JButton getButton_44(){
+		return button_44;
+		}
+		public void setButton_45(JButton button_45){
+		this.button_45 = button_45;
+		}
+		public JButton getButton_45(){
+		return button_45;
+		}
+		public void setButton_46(JButton button_46){
+		this.button_46 = button_46;
+		}
+		public JButton getButton_46(){
+		return button_46;
+		}
+		public void setButton_47(JButton button_47){
+		this.button_47 = button_47;
+		}
+		public JButton getButton_47(){
+		return button_47;
+		}
+		public void setButton_48(JButton button_48){
+		this.button_48 = button_48;
+		}
+		public JButton getButton_48(){
+		return button_48;
+		}
+		public void setButton_49(JButton button_49){
+		this.button_49 = button_49;
+		}
+		public JButton getButton_49(){
+		return button_49;
+		}
+		public void setButton_50(JButton button_50){
+		this.button_50 = button_50;
+		}
+		public JButton getButton_50(){
+		return button_50;
+		}
+
 	
-	
-	
-	
-	private final Color colorValues[] = {Color.RED, Color.BLACK, Color.WHITE};
 	private JTextField textField;
 	
 	public static void main(String[] args) {
@@ -2076,6 +2153,346 @@ public class Main extends JFrame implements MouseListener,MouseMotionListener {
 			repaint();
 		}
 	});
+	
+	getButton_19().addActionListener(new ActionListener() {
+		
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			// TODO Auto-generated method stub
+			
+			if( x1 == 0){
+				
+				x1 = 460;
+				y1 = 148;
+				
+			}
+			else{
+				
+				x2 = 460;
+				y2 = 148;
+			}
+			repaint();
+		}
+	});
+	
+	getButton_20().addActionListener(new ActionListener() {
+		
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			// TODO Auto-generated method stub
+			
+			if( x1 == 0){
+				
+				x1 = 492;
+				y1 = 148;
+				
+			}
+			else{
+				
+				x2 = 492;
+				y2 = 148;
+			}
+			repaint();
+		}
+	});
+	
+	getButton_21().addActionListener(new ActionListener() {
+		
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			// TODO Auto-generated method stub
+			
+			if( x1 == 0){
+				
+				x1 = 525;
+				y1 = 148;
+				
+			}
+			else{
+				
+				x2 = 525;
+				y2 = 148;
+			}
+			repaint();
+		}
+	});
+	
+
+	getButton_22().addActionListener(new ActionListener() {
+		
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			// TODO Auto-generated method stub
+			
+			if( x1 == 0){
+				
+				x1 = 557;
+				y1 = 148;
+				
+			}
+			else{
+				
+				x2 = 557;
+				y2 = 148;
+			}
+			repaint();
+		}
+	});
+	
+	getButton_23().addActionListener(new ActionListener() {
+		
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			// TODO Auto-generated method stub
+			
+			if( x1 == 0){
+				
+				x1 = 198;
+				y1 = 189;
+				
+			}
+			else{
+				
+				x2 = 198;
+				y2 = 189;
+			}
+			repaint();
+		}
+	});
+	
+	getButton_24().addActionListener(new ActionListener() {
+		
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			// TODO Auto-generated method stub
+			
+			if( x1 == 0){
+				
+				x1 = 230;
+				y1 = 189;
+				
+			}
+			else{
+				
+				x2 = 230;
+				y2 = 189;
+			}
+			repaint();
+		}
+	});	
+	getButton_25().addActionListener(new ActionListener() {
+		
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			// TODO Auto-generated method stub
+			
+			if( x1 == 0){
+				
+				x1 = 263;
+				y1 = 189;
+				
+			}
+			else{
+				
+				x2 = 263;
+				y2 = 189;
+			}
+			repaint();
+		}
+	});
+	
+
+	getButton_26().addActionListener(new ActionListener() {
+		
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			// TODO Auto-generated method stub
+			
+			if( x1 == 0){
+				
+				x1 = 296;
+				y1 = 189;
+				
+			}
+			else{
+				
+				x2 = 296;
+				y2 = 189;
+			}
+			repaint();
+		}
+	});
+	
+	getButton_27().addActionListener(new ActionListener() {
+		
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			// TODO Auto-generated method stub
+			
+			if( x1 == 0){
+				
+				x1 = 328;
+				y1 = 189;
+				
+			}
+			else{
+				
+				x2 = 328;
+				y2 = 189;
+			}
+			repaint();
+		}
+	});
+	
+	getButton_28().addActionListener(new ActionListener() {
+		
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			// TODO Auto-generated method stub
+			
+			if( x1 == 0){
+				
+				x1 = 362;
+				y1 = 189;
+				
+			}
+			else{
+				
+				x2 = 362;
+				y2 = 189;
+			}
+			repaint();
+		}
+	});
+
+	getButton_29().addActionListener(new ActionListener() {
+		
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			// TODO Auto-generated method stub
+			
+			if( x1 == 0){
+				
+				x1 = 396;
+				y1 = 189;
+				
+			}
+			else{
+				
+				x2 = 396;
+				y2 = 189;
+			}
+			repaint();
+		}
+	});
+
+	getButton_30().addActionListener(new ActionListener() {
+		
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			// TODO Auto-generated method stub
+			
+			if( x1 == 0){
+				
+				x1 = 429;
+				y1 = 189;
+				
+			}
+			else{
+				
+				x2 = 429;
+				y2 = 189;
+			}
+			repaint();
+		}
+	});
+	
+	getButton_31().addActionListener(new ActionListener() {
+		
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			// TODO Auto-generated method stub
+			
+			if( x1 == 0){
+				
+				x1 = 462;
+				y1 = 189;
+				
+			}
+			else{
+				
+				x2 = 462;
+				y2 = 189;
+			}
+			repaint();
+		}
+	});
+	
+	getButton_32().addActionListener(new ActionListener() {
+		
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			// TODO Auto-generated method stub
+			
+			if( x1 == 0){
+				
+				x1 = 494;
+				y1 = 189;
+				
+			}
+			else{
+				
+				x2 = 494;
+				y2 = 189;
+			}
+			repaint();
+		}
+	});
+	
+	getButton_33().addActionListener(new ActionListener() {
+		
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			// TODO Auto-generated method stub
+			
+			if( x1 == 0){
+				
+				x1 = 527;
+				y1 = 189;
+				
+			}
+			else{
+				
+				x2 = 527;
+				y2 = 189;
+			}
+			repaint();
+		}
+	});
+	
+	getButton_34().addActionListener(new ActionListener() {
+		
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			// TODO Auto-generated method stub
+			
+			if( x1 == 0){
+				
+				x1 = 559;
+				y1 = 189;
+				
+			}
+			else{
+				
+				x2 = 559;
+				y2 = 189;
+			}
+			repaint();
+		}
+	});
+	
+	
+	
 		switch(i){
 			case 0:
 				g2d.setColor(Color.red);
@@ -2090,7 +2507,8 @@ public class Main extends JFrame implements MouseListener,MouseMotionListener {
 		g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
 		g2d.setStroke(new BasicStroke(9, BasicStroke.CAP_ROUND, BasicStroke.JOIN_BEVEL));
 		
-		//g.drawLine(x1, y1, x2, y2);
+		g.drawLine(x1, y1, x2, y2);
+	
 		for(i = 0; i < 100; i++)
 		{
 			if(Clickpoint > 2 && i % 2 == 0)
