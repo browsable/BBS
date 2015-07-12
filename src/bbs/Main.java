@@ -48,6 +48,7 @@ public class Main extends JFrame implements MouseListener,MouseMotionListener {
 	//--------------------------------------------------------------------------------------------
 	private JPanel contentPane;
 	public JLabel label;
+	public int flag;
 	private ButtonGroup radioGroup;
 	JRadioButton rdbtnRed, rdbtnNewRadioButton, rdbtnWhite;
 	Graphics2D g2d;
@@ -552,6 +553,21 @@ public class Main extends JFrame implements MouseListener,MouseMotionListener {
 		comboBox.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				textField.setText((String) comboBox.getSelectedItem());
+				if(comboBox.getSelectedItem() == "line-black") {
+					System.out.println("1");					
+				}
+				else if(comboBox.getSelectedItem() == "line-red") {
+					System.out.println("2");
+				}
+				else if(comboBox.getSelectedItem() == "line-white") {
+					System.out.println("3");
+				}
+				else if(comboBox.getSelectedItem() == "7400") {
+					System.out.println("4");
+				}
+				else if(comboBox.getSelectedItem() == "led") {
+					System.out.println("5");
+				}
 			}
 		});
 		comboBox.setBounds(12, 35, 113, 21);
@@ -2490,7 +2506,26 @@ public class Main extends JFrame implements MouseListener,MouseMotionListener {
 			repaint();
 		}
 	});
-	
+	getButton_35().addActionListener(new ActionListener() {
+		
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			// TODO Auto-generated method stub
+			
+			if( x1 == 0){
+				
+				x1 = 592;
+				y1 = 189;
+				
+			}
+			else{
+				
+				x2 = 592;
+				y2 = 189;
+			}
+			repaint();
+		}
+	});
 	
 	
 		switch(i){
