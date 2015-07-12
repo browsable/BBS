@@ -549,6 +549,7 @@ public class Main extends JFrame implements MouseListener,MouseMotionListener {
 		contentPane.add(panel);
 		panel.setLayout(null);
 		
+		//flag
 		JComboBox comboBox = new JComboBox();
 		comboBox.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
