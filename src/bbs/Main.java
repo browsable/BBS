@@ -37,37 +37,40 @@ import java.awt.Component;
 import javax.swing.JTextPane;
 
 public class Main extends JFrame implements MouseListener, MouseMotionListener {
-	// --------------------------------------------------------------------------------------------
+
 	private Point p1 = new Point(0, 0);
 	private Point p2 = new Point(0, 0);
 	private boolean drawing;
 	int i = 0;
 	int Clickpoint = 0;
-	int x[] = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
-	int y[] = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+	int x[] = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+			0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+			0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+			0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,};
+	int y[] = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+			0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+			0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+			0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,};
+	int line = 0;
 	int x1 = 0, x2 = 0, y1 = 0, y2 = 0;
-	// --------------------------------------------------------------------------------------------
+	
 	private JPanel contentPane;
 	public JLabel label;
 	public int flag;
 	private ImageIcon img = null;
 	private ButtonGroup radioGroup;
-	JRadioButton rdbtnRed, rdbtnNewRadioButton, rdbtnWhite;
+	JRadioButton rdbtnRed, rdbtnBlack, rdbtnWhite;
 	Graphics2D g2d;
 	private JPanel panel_5;
-	private JButton button;
-	private JButton button_1;
-	private JButton button_2;
-	private JButton button_3, button_4, button_5, button_6, button_7, button_8, button_9, button_10, button_11,
-			button_12, button_13, button_14, button_15, button_16, button_17, button_18, button_19, button_20,
-			button_21, button_22, button_23, button_24, button_25, button_26, button_27, button_28, button_29,
-			button_30, button_31, button_32, button_33, button_34, button_35, button_36, button_37, button_38,
-			button_39, button_40, button_41, button_42, button_43, button_44, button_45, button_46, button_47,
-			button_48, button_49, button_50, button_51, button_52, button_53, button_54, button_55, button_56,
-			button_57, button_58, button_59, button_60, button_61, button_62, button_63, button_64, button_65,
-			button_66, button_67, button_68, button_69, button_70;
+	private JButton button, button_1,button_2, button_3, button_4, button_5, button_6, button_7, button_8, button_9,
+			button_10, button_11, button_12, button_13, button_14, button_15, button_16, button_17, button_18,
+			button_19, button_20, button_21, button_22, button_23, button_24, button_25, button_26, button_27,
+			button_28, button_29, button_30 /*, button_31, button_32, button_33, button_34, button_35, button_36,
+			button_37, button_38, button_39, button_40, button_41, button_42, button_43, button_44, button_45,
+			button_46, button_47, button_48, button_49, button_50, button_51, button_52, button_53, button_54,
+			button_55, button_56, button_57, button_58, button_59, button_60, button_61, button_62, button_63,
+			button_64, button_65, button_66, button_67, button_68, button_69, button_70*/;
 	
-
 	public JRadioButton getRdbtnRed() {
 		return rdbtnRed;
 	}
@@ -76,12 +79,12 @@ public class Main extends JFrame implements MouseListener, MouseMotionListener {
 		this.rdbtnRed = rdbtnRed;
 	}
 
-	public JRadioButton getRdbtnNewRadioButton() {
-		return rdbtnNewRadioButton;
+	public JRadioButton getrdbtnBlack() {
+		return rdbtnBlack;
 	}
 
-	public void setRdbtnNewRadioButton(JRadioButton rdbtnNewRadioButton) {
-		this.rdbtnNewRadioButton = rdbtnNewRadioButton;
+	public void setrdbtnBlack(JRadioButton rdbtnBlack) {
+		this.rdbtnBlack = rdbtnBlack;
 	}
 
 	public JRadioButton getRdbtnWhite() {
@@ -129,7 +132,7 @@ public class Main extends JFrame implements MouseListener, MouseMotionListener {
 		return button_3;
 	}
 
-	public void setButton_4(JButton button_3) {
+	public void setButton_4(JButton button_4) {
 
 		this.button_4 = button_4;
 	}
@@ -327,15 +330,6 @@ public class Main extends JFrame implements MouseListener, MouseMotionListener {
 		return button_25;
 	}
 
-	public void setButton_27(JButton button_27) {
-
-		this.button_27 = button_27;
-	}
-
-	public JButton getButton_27() {
-		return button_27;
-	}
-
 	public void setButton_26(JButton button_26) {
 
 		this.button_26 = button_26;
@@ -343,6 +337,15 @@ public class Main extends JFrame implements MouseListener, MouseMotionListener {
 
 	public JButton getButton_26() {
 		return button_26;
+	}
+	
+	public void setButton_27(JButton button_27) {
+
+		this.button_27 = button_27;
+	}
+
+	public JButton getButton_27() {
+		return button_27;
 	}
 
 	public void setButton_28(JButton button_28) {
@@ -370,7 +373,8 @@ public class Main extends JFrame implements MouseListener, MouseMotionListener {
 	public JButton getButton_30() {
 		return button_30;
 	}
-
+//--------------------------------------------------------------------------
+/*	
 	public void setButton_31(JButton button_31) {
 		this.button_31 = button_31;
 	}
@@ -384,11 +388,11 @@ public class Main extends JFrame implements MouseListener, MouseMotionListener {
 	}
 
 	public JButton getButton_32() {
-		return button_33;
+		return button_32;
 	}
 
-	public void setButton_33(JButton button_32) {
-		this.button_32 = button_32;
+	public void setButton_33(JButton button_33) {
+		this.button_33 = button_33;
 	}
 
 	public JButton getButton_33() {
@@ -530,7 +534,8 @@ public class Main extends JFrame implements MouseListener, MouseMotionListener {
 	public JButton getButton_50() {
 		return button_50;
 	}
-
+*/
+//--------------------------------------------------------------------------
 	private JTextField textField;
 
 	public static void main(String[] args) {
@@ -543,17 +548,13 @@ public class Main extends JFrame implements MouseListener, MouseMotionListener {
 				try {
 					Main frame = new Main();
 					frame.setVisible(true);
-					// --------------------------------------------------------------------------------------------
 					new Main().display();
-					// --------------------------------------------------------------------------------------------
-
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
 			}
 		});
 	}
-	//
 
 	/**
 	 * <<<<<<< HEAD Create the frame. adlfkajsldfk ======= >>>>>>>
@@ -686,9 +687,9 @@ public class Main extends JFrame implements MouseListener, MouseMotionListener {
 		textPane_2.setBounds(448, 6, 400, 51);
 		panel_3.add(textPane_2);
 		
-				JTextPane textPane = new JTextPane();
-				textPane.setBounds(12, 6, 400, 51);
-				panel_3.add(textPane);
+		JTextPane textPane = new JTextPane();
+		textPane.setBounds(12, 6, 400, 51);
+		panel_3.add(textPane);
 
 		button = new JButton("hole");
 		button.setBounds(52, 19, 21, 16);
@@ -787,10 +788,12 @@ public class Main extends JFrame implements MouseListener, MouseMotionListener {
 		panel_2.add(button_23);
 
 		button_24 = new JButton("hole");
+		/*
 		button_24.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 			}
 		});
+		*/
 		button_24.setBounds(52, 85, 21, 16);
 		panel_2.add(button_24);
 
@@ -817,7 +820,8 @@ public class Main extends JFrame implements MouseListener, MouseMotionListener {
 		button_30 = new JButton("hole");
 		button_30.setBounds(250, 85, 21, 16);
 		panel_2.add(button_30);
-
+//--------------------------------------------------------------------------
+/*
 		button_31 = new JButton("hole");
 		button_31.setBounds(283, 85, 21, 16);
 		panel_2.add(button_31);
@@ -829,11 +833,15 @@ public class Main extends JFrame implements MouseListener, MouseMotionListener {
 		button_33 = new JButton("hole");
 		button_33.setBounds(349, 85, 21, 16);
 		panel_2.add(button_33);
-
+		
 		button_34 = new JButton("hole");
 		button_34.setBounds(382, 85, 21, 16);
 		panel_2.add(button_34);
 
+		button_35 = new JButton("hole");
+		button_35.setBounds(19, 47, 21, 16);
+		panel_2.add(button_35);
+		
 		button_36 = new JButton("hole");
 		button_36.setBounds(415, 47, 21, 16);
 		panel_2.add(button_36);
@@ -1725,24 +1733,22 @@ public class Main extends JFrame implements MouseListener, MouseMotionListener {
 		JButton button_258 = new JButton("hole");
 		button_258.setBounds(19, 343, 21, 16);
 		panel_2.add(button_258);
-
-		JButton button_35 = new JButton("hole");
-		button_35.setBounds(19, 47, 21, 16);
-		panel_2.add(button_35);
-		
-				JPanel panel_5 = new JPanel() {
-		            @Override
-		            public void paint(Graphics g) {
-		                if(img != null) {
-		                    // 이미지 그리기
-		                    g.drawImage(img.getImage(), 0, 0, getWidth(), getHeight(), this);
-		                }
-		            }
-		        };
-				panel_5.setBounds(52, 98, 252, 68);
-				panel_2.add(panel_5);
-				panel_5.setBackground(new Color(255, 228, 196));
-		
+*/
+//--------------------------------------------------------------------------
+		JPanel panel_5 = new JPanel() {
+			@Override
+			public void paint(Graphics g) {
+				if(img != null) {
+					// 이미지 그리기
+					g.drawImage(img.getImage(), 0, 0, getWidth(), getHeight(), this);
+				}
+			}
+		};
+		panel_5.setBounds(52, 98, 252, 68);
+		panel_2.add(panel_5);
+		panel_5.setBackground(new Color(255, 228, 196));
+//-----------------------------------------------------------------------------------------------------------------------
+/*
 		panel_1.setFocusTraversalPolicy(new FocusTraversalOnArray(new Component[] { btnHole, button, button_1, button_2,
 				button_3, button_4, button_5, button_6, button_7, button_8, button_9, button_10, button_35, button_155,
 				button_154, button_153, button_142, button_199, button_197, button_196, button_11, button_12, button_13,
@@ -1774,7 +1780,15 @@ public class Main extends JFrame implements MouseListener, MouseMotionListener {
 				button_225, button_224, button_221, button_220, button_258, button_255, button_254, button_251,
 				button_250, button_247, button_246, button_243, button_242, button_239, button_238, button_235,
 				button_234, button_231, button_230, button_227, button_226, button_223, button_222, button_219, panel_2,
-				rdbtnRed, rdbtnNewRadioButton, rdbtnWhite }));
+				rdbtnRed, rdbtnBlack, rdbtnWhite }));
+*/
+//30 buttons
+		panel_1.setFocusTraversalPolicy(new FocusTraversalOnArray(new Component[] { btnHole, button, button_1, button_2,
+				button_3, button_4, button_5, button_6, button_7, button_8, button_9, button_10, button_11, button_12, 
+				button_13, button_14, button_15, button_16, button_17, button_18, button_19, button_20, button_21,
+				button_22, button_23, button_24, button_25, button_26, button_27, button_28, button_29, button_30,
+				panel_2, rdbtnRed, rdbtnBlack, rdbtnWhite }));
+/*	
 		setFocusTraversalPolicy(new FocusTraversalOnArray(new Component[] { menuBar, mnFile, mntmNew, mntmOpen,
 				mntmSave, mnEdit, mntmBack, mnHelp, mntmAbout, contentPane, panel, comboBox, panel_4, textField,
 				panel_1, panel_2, btnHole, button, button_1, button_2, button_3, button_4, button_5, button_6, button_7,
@@ -1808,17 +1822,25 @@ public class Main extends JFrame implements MouseListener, MouseMotionListener {
 				button_234, button_235, button_236, button_237, button_238, button_239, button_240, button_241,
 				button_242, button_243, button_244, button_245, button_246, button_247, button_248, button_249,
 				button_250, button_251, button_252, button_253, button_254, button_255, button_256, button_257,
-				button_258, rdbtnRed, rdbtnNewRadioButton, rdbtnWhite, panel_3 }));
-
+				button_258, rdbtnRed, rdbtnBlack, rdbtnWhite, panel_3 }));
+*/
+//30 buttons
+		setFocusTraversalPolicy(new FocusTraversalOnArray(new Component[] { menuBar, mnFile, mntmNew, mntmOpen,
+				mntmSave, mnEdit, mntmBack, mnHelp, mntmAbout, contentPane, panel, comboBox, panel_4, textField,
+				panel_1, panel_2, btnHole, button, button_1, button_2, button_3, button_4, button_5, button_6, button_7,
+				button_8, button_9, button_10, button_11, button_12, button_13, button_14, button_15, button_16,
+				button_17, button_18, button_19, button_20, button_21, button_22, button_23, button_24, button_25,
+				button_26, button_27, button_28, button_29, button_30, rdbtnRed, rdbtnBlack, rdbtnWhite, panel_3 }));
+//-----------------------------------------------------------------------------------------------------------------------
+		
 		// radio 甕곌쑵�뱣 �뤃占�
-
 		rdbtnRed = new JRadioButton("RED", true);
 		rdbtnRed.setBounds(8, 6, 55, 23);
 		panel_1.add(rdbtnRed);
 
-		rdbtnNewRadioButton = new JRadioButton("Black", false);
-		rdbtnNewRadioButton.setBounds(67, 6, 70, 23);
-		panel_1.add(rdbtnNewRadioButton);
+		rdbtnBlack = new JRadioButton("Black", false);
+		rdbtnBlack.setBounds(67, 6, 70, 23);
+		panel_1.add(rdbtnBlack);
 
 		rdbtnWhite = new JRadioButton("White", false);
 		rdbtnWhite.setBounds(141, 6, 70, 23);
@@ -1826,15 +1848,13 @@ public class Main extends JFrame implements MouseListener, MouseMotionListener {
 
 		radioGroup = new ButtonGroup();
 		radioGroup.add(rdbtnRed);
-		radioGroup.add(rdbtnNewRadioButton);
+		radioGroup.add(rdbtnBlack);
 		radioGroup.add(rdbtnWhite);
-
 	}
 
 	public void paint(Graphics g) {
 		super.paint(g);
 		
-				// --------------------------------------------------------------------------------------------
 		g2d = (Graphics2D) g;
 		
 		// g2d.setColor(Color.black);
@@ -1846,7 +1866,7 @@ public class Main extends JFrame implements MouseListener, MouseMotionListener {
 				i = 0;
 			}
 		});
-		getRdbtnNewRadioButton().addActionListener(new ActionListener() {
+		getrdbtnBlack().addActionListener(new ActionListener() {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
@@ -1864,6 +1884,7 @@ public class Main extends JFrame implements MouseListener, MouseMotionListener {
 		});
 
 		// button action listener==============================================
+		
 		getButton().addActionListener(new ActionListener() {
 
 			@Override
@@ -1872,13 +1893,28 @@ public class Main extends JFrame implements MouseListener, MouseMotionListener {
 				if (Clickpoint == 0) {
 					x[Clickpoint] = 233;
 					y[Clickpoint] = 120;
+					System.out.println(Clickpoint + ", " + x[Clickpoint] + ", " + y[Clickpoint]);
 					Clickpoint++;
+					line++;
+					System.out.println(Clickpoint + ", " + line);
 				}
-				if (x[Clickpoint] == 233 && y[Clickpoint] == 120) {
-				} else {
-					x[Clickpoint + 1] = 233;
-					y[Clickpoint + 1] = 120;
+				/*
+				else if (Clickpoint != 0 && x[Clickpoint - 1] == 233 && y[Clickpoint - 1] == 120){
+					System.out.println(Clickpoint + ", " + x[Clickpoint] + ", " + y[Clickpoint]);
 					Clickpoint++;
+					System.out.println(Clickpoint);
+				}
+				*/
+				else {
+					x[Clickpoint] = 233;
+					y[Clickpoint] = 120;
+					System.out.println(Clickpoint + ", " + x[Clickpoint] + ", " + y[Clickpoint]);
+					Clickpoint++;
+					line++;
+					System.out.println(Clickpoint + ", " + line);
+				}
+				if(line % 2 == 1) {
+					g.drawLine(x[Clickpoint - 1], y[Clickpoint - 1], x[Clickpoint], y[Clickpoint]);
 				}
 				repaint();
 			}
@@ -1892,13 +1928,30 @@ public class Main extends JFrame implements MouseListener, MouseMotionListener {
 				if (Clickpoint == 0) {
 					x[Clickpoint] = 269;
 					y[Clickpoint] = 120;
+					System.out.println(Clickpoint + ", " + x[Clickpoint] + ", " + y[Clickpoint]);
 					Clickpoint++;
+					line++;
+					System.out.println(Clickpoint + ", " + line);
 				}
-				if (x[Clickpoint] == 269 && y[Clickpoint] == 120) {
-				} else {
-					x[Clickpoint + 1] = 269;
-					y[Clickpoint + 1] = 120;
+				/*
+				else if (x[Clickpoint] == 269 && y[Clickpoint] == 120){
+					x[Clickpoint] = 269;
+					y[Clickpoint] = 120;
+					System.out.println(Clickpoint + ", " + x[Clickpoint] + ", " + y[Clickpoint]);
 					Clickpoint++;
+					System.out.println(Clickpoint);
+				}
+				*/
+				else {
+					x[Clickpoint] = 269;
+					y[Clickpoint] = 120;
+					System.out.println(Clickpoint + ", " + x[Clickpoint] + ", " + y[Clickpoint]);
+					Clickpoint++;
+					line++;
+					System.out.println(Clickpoint + ", " + line);
+				}
+				if(line % 2 == 1) {
+					g.drawLine(x[Clickpoint - 1], y[Clickpoint - 1], x[Clickpoint], y[Clickpoint]);
 				}
 				repaint();
 			}
@@ -1983,6 +2036,7 @@ public class Main extends JFrame implements MouseListener, MouseMotionListener {
 				repaint();
 			}
 		});
+		
 		getButton_6().addActionListener(new ActionListener() {
 
 			@Override
@@ -2002,6 +2056,7 @@ public class Main extends JFrame implements MouseListener, MouseMotionListener {
 				repaint();
 			}
 		});
+		
 		getButton_7().addActionListener(new ActionListener() {
 
 			@Override
@@ -2350,22 +2405,24 @@ public class Main extends JFrame implements MouseListener, MouseMotionListener {
 					img = new ImageIcon("7404.png");
 					panel_5.repaint();
 				} 
-				
-//				else {
-//					if (x1 == 0) {
-//
-//						x1 = 230;
-//						y1 = 189;
-//
-//					} else {
-//
-//						x2 = 230;
-//						y2 = 189;
-//					}
-//					repaint();
-//				}
+/*				
+				else {
+					if (x1 == 0) {
+
+						x1 = 230;
+						y1 = 189;
+
+					} else {
+
+						x2 = 230;
+						y2 = 189;
+					}
+					repaint();
+				}
+*/
 			}
 		});
+		
 		getButton_25().addActionListener(new ActionListener() {
 
 			@Override
@@ -2485,7 +2542,8 @@ public class Main extends JFrame implements MouseListener, MouseMotionListener {
 				repaint();
 			}
 		});
-
+//--------------------------------------------------------------------------
+/*
 		getButton_31().addActionListener(new ActionListener() {
 
 			@Override
@@ -2565,7 +2623,8 @@ public class Main extends JFrame implements MouseListener, MouseMotionListener {
 				repaint();
 			}
 		});
-		
+*/
+//--------------------------------------------------------------------------		
 		switch (i) {
 		case 0:
 			g2d.setColor(Color.red);
@@ -2579,15 +2638,17 @@ public class Main extends JFrame implements MouseListener, MouseMotionListener {
 		}
 		g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
 		g2d.setStroke(new BasicStroke(9, BasicStroke.CAP_ROUND, BasicStroke.JOIN_BEVEL));
-
+		
+		/*
 		g.drawLine(x1, y1, x2, y2);
-
+		
 		for (i = 0; i < 100; i++) {
 			if (Clickpoint > 2 && i % 2 == 0) {
 				g.drawLine(x[i], y[i], x[i + 1], y[i + 1]);
 			}
 		}
-		// --------------------------------------------------------------------------------------------
+		*/
+		
 	}
 
 	private AbstractButton getbutton() {
@@ -2595,7 +2656,6 @@ public class Main extends JFrame implements MouseListener, MouseMotionListener {
 		return null;
 	}
 
-	// --------------------------------------------------------------------------------------------
 	@Override
 	public void mousePressed(MouseEvent e) {
 		drawing = true;
