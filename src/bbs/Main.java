@@ -1898,6 +1898,7 @@ public class Main extends JFrame implements MouseListener, MouseMotionListener {
 					line++;
 					System.out.println(Clickpoint + ", " + line);
 				}
+				
 				/*
 				else if (Clickpoint != 0 && x[Clickpoint - 1] == 233 && y[Clickpoint - 1] == 120){
 					System.out.println(Clickpoint + ", " + x[Clickpoint] + ", " + y[Clickpoint]);
@@ -1905,6 +1906,7 @@ public class Main extends JFrame implements MouseListener, MouseMotionListener {
 					System.out.println(Clickpoint);
 				}
 				*/
+				
 				else {
 					x[Clickpoint] = 233;
 					y[Clickpoint] = 120;
@@ -1933,6 +1935,7 @@ public class Main extends JFrame implements MouseListener, MouseMotionListener {
 					line++;
 					System.out.println(Clickpoint + ", " + line);
 				}
+				
 				/*
 				else if (x[Clickpoint] == 269 && y[Clickpoint] == 120){
 					x[Clickpoint] = 269;
@@ -1942,6 +1945,7 @@ public class Main extends JFrame implements MouseListener, MouseMotionListener {
 					System.out.println(Clickpoint);
 				}
 				*/
+				
 				else {
 					x[Clickpoint] = 269;
 					y[Clickpoint] = 120;
